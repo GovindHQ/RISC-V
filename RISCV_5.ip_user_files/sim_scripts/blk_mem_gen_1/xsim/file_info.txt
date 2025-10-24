@@ -1,0 +1,2 @@
+blk_mem_gen_1.v,verilog,xil_defaultlib,../../../../Superscalar.gen/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,incdir="../../../../../../Vivado/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

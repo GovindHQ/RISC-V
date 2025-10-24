@@ -1,0 +1,273 @@
+
+*** Running vivado
+    with args -log dopmidsem_EX_BC_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dopmidsem_EX_BC_0_0.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Fri Oct 24 16:08:03 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source dopmidsem_EX_BC_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 1550.418 ; gain = 131.055 ; free physical = 2295 ; free virtual = 11936
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/govind/Vivado/2025.1/Vivado/data/ip'.
+Command: synth_design -top dopmidsem_EX_BC_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 134960
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2168.980 ; gain = 439.828 ; free physical = 266 ; free virtual = 11069
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dopmidsem_EX_BC_0_0' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_EX_BC_0_0/synth/dopmidsem_EX_BC_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'EX_BC' [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/EX_BC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'EX_BC' (0#1) [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/EX_BC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dopmidsem_EX_BC_0_0' (0#1) [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_EX_BC_0_0/synth/dopmidsem_EX_BC_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2245.918 ; gain = 516.766 ; free physical = 278 ; free virtual = 10153
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2263.730 ; gain = 534.578 ; free physical = 273 ; free virtual = 10088
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2263.730 ; gain = 534.578 ; free physical = 273 ; free virtual = 10088
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2263.730 ; gain = 0.000 ; free physical = 270 ; free virtual = 10057
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2384.469 ; gain = 0.000 ; free physical = 339 ; free virtual = 9461
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2384.504 ; gain = 0.000 ; free physical = 331 ; free virtual = 9453
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2384.504 ; gain = 655.352 ; free physical = 269 ; free virtual = 7783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2392.473 ; gain = 663.320 ; free physical = 268 ; free virtual = 7772
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2392.473 ; gain = 663.320 ; free physical = 266 ; free virtual = 7752
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2392.473 ; gain = 663.320 ; free physical = 274 ; free virtual = 7694
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                1 Bit    Registers := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[31] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[30] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[29] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[28] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[27] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[26] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[25] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[24] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[23] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[22] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[21] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[20] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[19] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[18] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[17] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[16] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[15] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[14] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[13] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[12] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[11] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[10] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[9] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[8] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[7] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[6] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[5] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[4] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[3] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[2] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero1[1] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[31] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[30] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[29] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[28] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[27] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[26] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[25] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[24] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[23] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[22] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[21] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[20] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[19] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[18] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[17] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[16] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[15] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[14] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[13] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[12] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[11] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[10] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[9] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[8] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[7] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[6] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[5] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[4] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[3] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[2] driven by constant 0
+INFO: [Synth 8-3917] design dopmidsem_EX_BC_0_0 has port EX_BC_zero2[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2392.473 ; gain = 663.320 ; free physical = 230 ; free virtual = 7502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2409.473 ; gain = 680.320 ; free physical = 194 ; free virtual = 7426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2409.473 ; gain = 680.320 ; free physical = 201 ; free virtual = 7433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2419.488 ; gain = 690.336 ; free physical = 203 ; free virtual = 7433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 274 ; free virtual = 6598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 273 ; free virtual = 6598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 280 ; free virtual = 6598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 279 ; free virtual = 6597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 275 ; free virtual = 6595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 273 ; free virtual = 6592
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |FDRE |   110|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2595.301 ; gain = 866.148 ; free physical = 274 ; free virtual = 6592
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2595.301 ; gain = 745.375 ; free physical = 274 ; free virtual = 6552
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 2595.309 ; gain = 866.148 ; free physical = 275 ; free virtual = 6546
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2595.309 ; gain = 0.000 ; free physical = 277 ; free virtual = 6518
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2595.309 ; gain = 0.000 ; free physical = 1310 ; free virtual = 8077
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c76a1724
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2595.336 ; gain = 1044.918 ; free physical = 1341 ; free virtual = 8263
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1393.777; main = 1205.789; forked = 187.988
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3499.734; main = 2595.305; forked = 957.242
+INFO: [Common 17-1381] The checkpoint '/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_BC_0_0_synth_1/dopmidsem_EX_BC_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file dopmidsem_EX_BC_0_0_utilization_synth.rpt -pb dopmidsem_EX_BC_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 24 16:09:11 2025...

@@ -1,0 +1,330 @@
+
+*** Running vivado
+    with args -log dopmidsem_DataMem_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dopmidsem_DataMem_0_0.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Fri Oct 24 16:05:02 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source dopmidsem_DataMem_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/govind/Vivado/2025.1/Vivado/data/ip'.
+Command: synth_design -top dopmidsem_DataMem_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 130356
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2245.848 ; gain = 440.797 ; free physical = 284 ; free virtual = 6777
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dopmidsem_DataMem_0_0' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/DataMem.v:120]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1/.Xil/Vivado-129234-C3PO/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1/.Xil/Vivado-129234-C3PO/realtime/blk_mem_gen_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'wea' of module 'blk_mem_gen_1' is unconnected for instance 'DataMem_0' [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/DataMem.v:148]
+WARNING: [Synth 8-7071] port 'web' of module 'blk_mem_gen_1' is unconnected for instance 'DataMem_0' [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/DataMem.v:148]
+WARNING: [Synth 8-7023] instance 'DataMem_0' of module 'blk_mem_gen_1' has 10 connections declared, but only 8 given [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/DataMem.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (0#1) [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/DataMem.v:120]
+WARNING: [Synth 8-689] width (32) of port connection 'wrad1' does not match port width (10) of module 'DataMem' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:99]
+WARNING: [Synth 8-689] width (32) of port connection 'wrad2' does not match port width (10) of module 'DataMem' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:100]
+WARNING: [Synth 8-689] width (32) of port connection 'rdad1' does not match port width (10) of module 'DataMem' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:101]
+WARNING: [Synth 8-689] width (32) of port connection 'rdad2' does not match port width (10) of module 'DataMem' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'dopmidsem_DataMem_0_0' (0#1) [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/synth/dopmidsem_DataMem_0_0.v:53]
+WARNING: [Synth 8-7129] Port reset in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Memread1 in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Memread2 in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[31] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[30] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[29] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[28] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[27] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[26] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[25] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[24] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[23] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[22] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[21] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[20] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[19] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[18] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[17] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[16] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[15] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[14] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[13] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[12] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[11] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[10] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[31] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[30] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[29] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[28] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[27] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[26] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[25] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[24] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[23] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[22] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[21] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[20] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[19] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[18] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[17] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[16] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[15] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[14] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[13] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[12] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[11] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad2[10] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[31] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[30] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[29] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[28] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[27] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[26] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[25] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[24] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[23] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[22] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[21] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[20] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[19] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[18] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[17] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[16] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[15] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[14] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[13] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[12] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[11] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad1[10] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[31] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[30] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[29] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[28] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[27] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[26] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[25] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[24] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[23] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[22] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[21] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[20] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[19] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[18] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[17] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[16] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[15] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[14] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[13] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[12] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[11] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rdad2[10] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2321.816 ; gain = 516.766 ; free physical = 203 ; free virtual = 6548
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2339.629 ; gain = 534.578 ; free physical = 200 ; free virtual = 6546
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2339.629 ; gain = 534.578 ; free physical = 200 ; free virtual = 6546
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2339.629 ; gain = 0.000 ; free physical = 199 ; free virtual = 6547
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/govind/RISCV_5/RISCV_5.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_Data_2_in_context.xdc] for cell 'inst/DataMem_0'
+Finished Parsing XDC File [/home/govind/RISCV_5/RISCV_5.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_Data_2_in_context.xdc] for cell 'inst/DataMem_0'
+Parsing XDC File [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/dopmidsem_DataMem_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/dopmidsem_DataMem_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2394.492 ; gain = 0.000 ; free physical = 227 ; free virtual = 6393
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2394.527 ; gain = 0.000 ; free physical = 219 ; free virtual = 6393
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2394.527 ; gain = 589.477 ; free physical = 183 ; free virtual = 6210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2402.496 ; gain = 597.445 ; free physical = 183 ; free virtual = 6210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2402.496 ; gain = 597.445 ; free physical = 180 ; free virtual = 6210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2402.496 ; gain = 597.445 ; free physical = 165 ; free virtual = 6195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port reset in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Memread1 in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Memread2 in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[31] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[30] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[29] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[28] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[27] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrad1[26] in module dopmidsem_DataMem_0_0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2402.496 ; gain = 597.445 ; free physical = 215 ; free virtual = 5967
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 2507.496 ; gain = 702.445 ; free physical = 305 ; free virtual = 4439
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 2507.496 ; gain = 702.445 ; free physical = 278 ; free virtual = 4423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 2517.512 ; gain = 712.461 ; free physical = 273 ; free virtual = 4569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module DataMem_0 has unconnected pin wea[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module DataMem_0 has unconnected pin web[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2434 ; free virtual = 10336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2434 ; free virtual = 10336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2433 ; free virtual = 10335
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2427 ; free virtual = 10330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2425 ; free virtual = 10328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2424 ; free virtual = 10327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_1 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |LUT3        |    20|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.324 ; gain = 888.273 ; free physical = 2420 ; free virtual = 10323
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 92 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 2693.324 ; gain = 833.375 ; free physical = 2330 ; free virtual = 10285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 2693.332 ; gain = 888.273 ; free physical = 2328 ; free virtual = 10284
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.332 ; gain = 0.000 ; free physical = 2303 ; free virtual = 10291
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2749.352 ; gain = 0.000 ; free physical = 1914 ; free virtual = 10259
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 21e92393
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 108 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:18 . Memory (MB): peak = 2749.387 ; gain = 1138.180 ; free physical = 1809 ; free virtual = 10218
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 978.985; main = 978.985; forked = 186.537
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3542.754; main = 2749.355; forked = 957.238
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2773.363 ; gain = 0.000 ; free physical = 1781 ; free virtual = 10217
+INFO: [Common 17-1381] The checkpoint '/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1/dopmidsem_DataMem_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file dopmidsem_DataMem_0_0_utilization_synth.rpt -pb dopmidsem_DataMem_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 24 16:06:39 2025...

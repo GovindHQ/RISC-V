@@ -1,0 +1,102 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'PC1' is not allowed [C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IF.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/ID_RN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_RN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/ROB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/RAT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/RN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RN
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/RN_IS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RN_IS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IQ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IQ
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/URS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module URS
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/LSQ.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LSQ
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/LSQ.v:153]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IS_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IS_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/EX_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/EX_BC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_BC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/BC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/BC_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BC_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/CM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IF_0_0/sim/dopmidsem_IF_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_IF_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_InstrMem_0_0/sim/dopmidsem_InstrMem_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_InstrMem_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IF_ID_0_0/sim/dopmidsem_IF_ID_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_IF_ID_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ID_0_0/sim/dopmidsem_ID_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_ID_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ControlUnit_0_0/sim/dopmidsem_ControlUnit_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_ControlUnit_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ControlUnit_1_0/sim/dopmidsem_ControlUnit_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_ControlUnit_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ID_RN_0_0/sim/dopmidsem_ID_RN_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_ID_RN_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ROB_0_0/sim/dopmidsem_ROB_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_ROB_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RAT_0_0/sim/dopmidsem_RAT_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_RAT_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RN_0_0/sim/dopmidsem_RN_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_RN_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RN_IS_0_0/sim/dopmidsem_RN_IS_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_RN_IS_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IQ_0_0/sim/dopmidsem_IQ_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_IQ_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RegFile_0_0/sim/dopmidsem_RegFile_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_RegFile_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_URS_0_0/sim/dopmidsem_URS_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_URS_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_LSQ_0_0/sim/dopmidsem_LSQ_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_LSQ_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IS_EX_0_0/sim/dopmidsem_IS_EX_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_IS_EX_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_0_0/sim/dopmidsem_EX_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_EX_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_ALU_0_0/sim/dopmidsem_EX_ALU_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_EX_ALU_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_ALU_1_0/sim/dopmidsem_EX_ALU_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_EX_ALU_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_BC_0_0/sim/dopmidsem_EX_BC_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_EX_BC_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_BC_0_0/sim/dopmidsem_BC_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_BC_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/sim/dopmidsem_DataMem_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_DataMem_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_BC_WB_0_0/sim/dopmidsem_BC_WB_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_BC_WB_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_CM_0_0/sim/dopmidsem_CM_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_CM_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.ip_user_files/bd/dopmidsem/sim/dopmidsem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/imports/hdl/dopmidsem_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dopmidsem_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.srcs/sim_1/new/IFwoB_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blockdes_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gauth/Superscalar/Superscalar.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

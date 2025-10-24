@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Oct 24 16:08:05 2025
+# Process ID         : 133933
+# Current directory  : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_ALU_0_0_synth_1
+# Command line       : vivado -log dopmidsem_EX_ALU_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dopmidsem_EX_ALU_0_0.tcl
+# Log file           : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_ALU_0_0_synth_1/dopmidsem_EX_ALU_0_0.vds
+# Journal file       : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_ALU_0_0_synth_1/vivado.jou
+# Running On         : C3PO
+# Platform           : EndeavourOS
+# Operating System   : EndeavourOS Linux
+# Processor Detail   : Intel(R) Core(TM) Ultra 5 125H
+# CPU Frequency      : 1294.748 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 18
+# Host memory        : 16347 MB
+# Swap memory        : 20641 MB
+# Total Virtual      : 36988 MB
+# Available Virtual  : 12946 MB
+#-----------------------------------------------------------
+source dopmidsem_EX_ALU_0_0.tcl -notrace

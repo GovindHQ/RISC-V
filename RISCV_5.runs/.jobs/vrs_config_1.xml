@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="dopmidsem_system_ila_0_1_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_system_ila_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_CM_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_CM_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_IF_ID_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IF_ID_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_ID_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_ID_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_BC_WB_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_BC_WB_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_LSQ_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_LSQ_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_RN_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_RN_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_IQ_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IQ_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_DataMem_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_DataMem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_RN_IS_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_RN_IS_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_RegFile_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_RegFile_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_ROB_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_ROB_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_URS_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_URS_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_BC_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_BC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_RAT_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_RAT_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_IS_EX_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IS_EX_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_ControlUnit_1_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_ControlUnit_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_ID_RN_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_ID_RN_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_ControlUnit_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_ControlUnit_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_EX_BC_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_BC_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_EX_ALU_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_ALU_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_EX_ALU_1_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_ALU_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_EX_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_EX_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_InstrMem_0_3_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_InstrMem_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dopmidsem_IF_wrapper_0_0_synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IF_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/govind/RISCV_5/RISCV_5.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="dopmidsem_system_ila_0_1_synth_1"/>
+		<Parent Id="dopmidsem_CM_0_0_synth_1"/>
+		<Parent Id="dopmidsem_IF_ID_0_0_synth_1"/>
+		<Parent Id="dopmidsem_ID_0_0_synth_1"/>
+		<Parent Id="dopmidsem_BC_WB_0_0_synth_1"/>
+		<Parent Id="dopmidsem_LSQ_0_0_synth_1"/>
+		<Parent Id="dopmidsem_RN_0_0_synth_1"/>
+		<Parent Id="dopmidsem_IQ_0_0_synth_1"/>
+		<Parent Id="dopmidsem_DataMem_0_0_synth_1"/>
+		<Parent Id="dopmidsem_RN_IS_0_0_synth_1"/>
+		<Parent Id="dopmidsem_RegFile_0_0_synth_1"/>
+		<Parent Id="dopmidsem_ROB_0_0_synth_1"/>
+		<Parent Id="dopmidsem_URS_0_0_synth_1"/>
+		<Parent Id="dopmidsem_BC_0_0_synth_1"/>
+		<Parent Id="dopmidsem_RAT_0_0_synth_1"/>
+		<Parent Id="dopmidsem_IS_EX_0_0_synth_1"/>
+		<Parent Id="dopmidsem_ControlUnit_1_0_synth_1"/>
+		<Parent Id="dopmidsem_ID_RN_0_0_synth_1"/>
+		<Parent Id="dopmidsem_ControlUnit_0_0_synth_1"/>
+		<Parent Id="dopmidsem_EX_BC_0_0_synth_1"/>
+		<Parent Id="dopmidsem_EX_ALU_0_0_synth_1"/>
+		<Parent Id="dopmidsem_EX_ALU_1_0_synth_1"/>
+		<Parent Id="dopmidsem_EX_0_0_synth_1"/>
+		<Parent Id="dopmidsem_InstrMem_0_3_synth_1"/>
+		<Parent Id="dopmidsem_IF_wrapper_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+		<Parameter Name="general.usePosixSpawnForFork" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

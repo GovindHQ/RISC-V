@@ -1,0 +1,54 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "dopmidsem_ControlUnit_0_0",
+    "cell_name": "ControlUnit_0",
+    "component_reference": "xilinx.com:module_ref:ControlUnit:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_ControlUnit_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "dopmidsem_ControlUnit_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_ControlUnit_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "opcode": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
+        "funct3": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
+        "funct7": [ { "direction": "in", "size_left": "6", "size_right": "0" } ],
+        "is_branch": [ { "direction": "out" } ],
+        "is_jump": [ { "direction": "out" } ],
+        "is_store": [ { "direction": "out" } ],
+        "is_load": [ { "direction": "out" } ],
+        "reg_write": [ { "direction": "out" } ],
+        "mem_read": [ { "direction": "out" } ],
+        "mem_write": [ { "direction": "out" } ],
+        "alu_op": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "imm_type": [ { "direction": "out", "size_left": "2", "size_right": "0" } ]
+      }
+    }
+  }
+}

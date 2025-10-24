@@ -1,0 +1,63 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot blockdes_TB_behav xil_defaultlib.blockdes_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3129] assignment to input 'i1' [C:/Users/gauth/Superscalar/Superscalar.srcs/sources_1/new/IF.v:33]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.BC
+Compiling module xil_defaultlib.dopmidsem_BC_0_0
+Compiling module xil_defaultlib.BC_WB
+Compiling module xil_defaultlib.dopmidsem_BC_WB_0_0
+Compiling module xil_defaultlib.CM
+Compiling module xil_defaultlib.dopmidsem_CM_0_0
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.dopmidsem_ControlUnit_0_0
+Compiling module xil_defaultlib.dopmidsem_ControlUnit_1_0
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.dopmidsem_DataMem_0_0
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.dopmidsem_EX_0_0
+Compiling module xil_defaultlib.EX_ALU
+Compiling module xil_defaultlib.dopmidsem_EX_ALU_0_0
+Compiling module xil_defaultlib.dopmidsem_EX_ALU_1_0
+Compiling module xil_defaultlib.EX_BC
+Compiling module xil_defaultlib.dopmidsem_EX_BC_0_0
+Compiling module xil_defaultlib.ID
+Compiling module xil_defaultlib.dopmidsem_ID_0_0
+Compiling module xil_defaultlib.ID_RN
+Compiling module xil_defaultlib.dopmidsem_ID_RN_0_0
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.dopmidsem_IF_0_0
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.dopmidsem_IF_ID_0_0
+Compiling module xil_defaultlib.IQ
+Compiling module xil_defaultlib.dopmidsem_IQ_0_0
+Compiling module xil_defaultlib.IS_EX
+Compiling module xil_defaultlib.dopmidsem_IS_EX_0_0
+Compiling module xil_defaultlib.dopmidsem_InstrMem_0_0
+Compiling module xil_defaultlib.LSQ
+Compiling module xil_defaultlib.dopmidsem_LSQ_0_0
+Compiling module xil_defaultlib.RAT
+Compiling module xil_defaultlib.dopmidsem_RAT_0_0
+Compiling module xil_defaultlib.RN
+Compiling module xil_defaultlib.dopmidsem_RN_0_0
+Compiling module xil_defaultlib.RN_IS
+Compiling module xil_defaultlib.dopmidsem_RN_IS_0_0
+Compiling module xil_defaultlib.ROB
+Compiling module xil_defaultlib.dopmidsem_ROB_0_0
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.dopmidsem_RegFile_0_0
+Compiling module xil_defaultlib.URS
+Compiling module xil_defaultlib.dopmidsem_URS_0_0
+Compiling module xil_defaultlib.dopmidsem
+Compiling module xil_defaultlib.dopmidsem_wrapper
+Compiling module xil_defaultlib.blockdes_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blockdes_TB_behav

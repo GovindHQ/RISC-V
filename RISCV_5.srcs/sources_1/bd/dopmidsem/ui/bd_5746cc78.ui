@@ -1,0 +1,306 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.853866",
+   "Default View_TopLeft":"-334,225",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -110 -y 290 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -110 -y 410 -defaultsOSRD
+preplace port port-id_instr_valid_0 -pg 1 -lvl 14 -x 7820 -y -50 -defaultsOSRD
+preplace port port-id_fetch_flush_0 -pg 1 -lvl 14 -x 7820 -y 620 -defaultsOSRD
+preplace port port-id_pc_redirect_valid_0 -pg 1 -lvl 0 -x -110 -y 540 -defaultsOSRD
+preplace portBus pc_redirect_target_0 -pg 1 -lvl 0 -x -110 -y 570 -defaultsOSRD
+preplace inst IF_ID_0 -pg 1 -lvl 2 -x 580 -y 390 -defaultsOSRD
+preplace inst ID_0 -pg 1 -lvl 4 -x 2020 -y 370 -defaultsOSRD
+preplace inst ControlUnit_0 -pg 1 -lvl 3 -x 1280 -y 620 -defaultsOSRD
+preplace inst ControlUnit_1 -pg 1 -lvl 3 -x 1280 -y 1100 -defaultsOSRD
+preplace inst ID_RN_0 -pg 1 -lvl 5 -x 2600 -y 560 -defaultsOSRD
+preplace inst ROB_0 -pg 1 -lvl 7 -x 4240 -y 1970 -defaultsOSRD
+preplace inst RAT_0 -pg 1 -lvl 8 -x 4720 -y 800 -defaultsOSRD
+preplace inst RN_0 -pg 1 -lvl 6 -x 3360 -y 730 -defaultsOSRD
+preplace inst RN_IS_0 -pg 1 -lvl 9 -x 5340 -y 440 -defaultsOSRD
+preplace inst IQ_0 -pg 1 -lvl 10 -x 6030 -y 670 -defaultsOSRD
+preplace inst RegFile_0 -pg 1 -lvl 9 -x 5340 -y 1070 -defaultsOSRD
+preplace inst URS_0 -pg 1 -lvl 11 -x 6770 -y 550 -defaultsOSRD
+preplace inst LSQ_0 -pg 1 -lvl 3 -x 1280 -y 1690 -defaultsOSRD
+preplace inst BC_0 -pg 1 -lvl 6 -x 3360 -y 1390 -defaultsOSRD
+preplace inst DataMem_0 -pg 1 -lvl 5 -x 2600 -y 1500 -defaultsOSRD
+preplace inst BC_WB_0 -pg 1 -lvl 13 -x 7640 -y 1330 -defaultsOSRD
+preplace inst CM_0 -pg 1 -lvl 4 -x 2020 -y 1480 -defaultsOSRD
+preplace inst Exec -pg 1 -lvl 12 -x 7190 -y 1120 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 1280 -y 50 -defaultsOSRD
+preplace inst IF_wrapper_0 -pg 1 -lvl 1 -x 150 -y 550 -defaultsOSRD
+preplace inst InstrMem_0 -pg 1 -lvl 1 -x 150 -y 350 -defaultsOSRD
+preplace netloc BC_0_DM_Memread1 1 4 3 2440 1690 NJ 1690 3540
+preplace netloc BC_0_DM_Memread2 1 4 3 2430 1890 NJ 1890 3530
+preplace netloc BC_0_DM_rad1 1 4 3 2420 1900 NJ 1900 3560
+preplace netloc BC_0_DM_rad2 1 4 3 2410 1910 NJ 1910 3550
+preplace netloc BC_0_bdcast1 1 6 1 3770 1420n
+preplace netloc BC_0_bdcast2 1 6 1 3750 1440n
+preplace netloc BC_0_bdcastad1 1 2 9 1060 1250 NJ 1250 NJ 1250 2850J 1640 4000 -100 NJ -100 NJ -100 NJ -100 6620
+preplace netloc BC_0_bdcastad2 1 2 9 1070 1260 NJ 1260 NJ 1260 2800J 1650 3780 -90 NJ -90 NJ -90 NJ -90 6610
+preplace netloc BC_0_bdcastadd1 1 2 5 1100 2080 NJ 2080 NJ 2080 NJ 2080 3580
+preplace netloc BC_0_bdcastadd2 1 2 5 1080 2090 NJ 2090 NJ 2090 NJ 2090 3570
+preplace netloc BC_0_bdcastval1 1 2 9 1070 2100 NJ 2100 NJ 2100 NJ 2100 3660 -80 NJ -80 NJ -80 NJ -80 6590
+preplace netloc BC_0_bdcastval2 1 2 9 1060 2110 NJ 2110 NJ 2110 NJ 2110 3610 -70 NJ -70 NJ -70 NJ -70 6570
+preplace netloc BC_0_bdseq1 1 2 5 1050 2120 NJ 2120 NJ 2120 NJ 2120 3520
+preplace netloc BC_0_bdseq2 1 2 5 1030 2150 NJ 2150 NJ 2150 NJ 2150 3590
+preplace netloc BC_WB_0_BC_WB_commitstage 1 6 8 4080 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 7800
+preplace netloc CM_0_DM_wad1 1 4 1 2390 1430n
+preplace netloc CM_0_DM_wad2 1 4 1 2400 1450n
+preplace netloc CM_0_RD1 1 4 5 2310 1040 NJ 1040 NJ 1040 NJ 1040 NJ
+preplace netloc CM_0_RD2 1 4 5 2330 1060 NJ 1060 NJ 1060 NJ 1060 NJ
+preplace netloc CM_0_clear1 1 2 3 990 2160 NJ 2160 2190
+preplace netloc CM_0_clear2 1 2 3 1040 2140 NJ 2140 2180
+preplace netloc CM_0_memw1 1 4 1 N 1550
+preplace netloc CM_0_memw2 1 4 1 N 1570
+preplace netloc CM_0_rfwd1 1 4 5 2210 1670 NJ 1670 3680J 1160 NJ 1160 NJ
+preplace netloc CM_0_rfwd2 1 4 5 2200 1680 NJ 1680 3700J 1200 NJ 1200 5080J
+preplace netloc CM_0_rw1 1 4 5 2320 1070 NJ 1070 NJ 1070 NJ 1070 5130J
+preplace netloc CM_0_rw2 1 4 5 2340 1080 NJ 1080 NJ 1080 NJ 1080 5120J
+preplace netloc CM_0_wdata1 1 4 1 2360 1390n
+preplace netloc CM_0_wdata2 1 4 1 2370 1410n
+preplace netloc ControlUnit_0_alu_op 1 3 2 NJ 680 2180
+preplace netloc ControlUnit_0_imm_type 1 3 1 1480 380n
+preplace netloc ControlUnit_0_is_branch 1 3 2 1650J 560 2210
+preplace netloc ControlUnit_0_is_jump 1 3 2 1630J 580 N
+preplace netloc ControlUnit_0_is_load 1 3 2 NJ 600 2230
+preplace netloc ControlUnit_0_is_store 1 3 2 1610J 610 2240
+preplace netloc ControlUnit_0_mem_read 1 3 2 NJ 640 2260
+preplace netloc ControlUnit_0_mem_write 1 3 2 NJ 660 2270
+preplace netloc ControlUnit_0_reg_write 1 3 2 NJ 620 2250
+preplace netloc ControlUnit_1_alu_op 1 3 2 1640J 910 2250
+preplace netloc ControlUnit_1_imm_type 1 3 1 1600 400n
+preplace netloc ControlUnit_1_is_branch 1 3 2 1500J 670 2280
+preplace netloc ControlUnit_1_is_jump 1 3 2 1590J 870 2210
+preplace netloc ControlUnit_1_is_load 1 3 2 1570J 850 2190
+preplace netloc ControlUnit_1_is_store 1 3 2 1580J 860 2200
+preplace netloc ControlUnit_1_mem_read 1 3 2 1620J 890 2230
+preplace netloc ControlUnit_1_mem_write 1 3 2 1630J 900 2240
+preplace netloc ControlUnit_1_reg_write 1 3 2 1610J 880 2220
+preplace netloc DataMem_0_rddata1 1 5 1 2900 1300n
+preplace netloc DataMem_0_rddata2 1 5 1 2920 1320n
+preplace netloc EX_BC_0_EX_BC_alur1 1 5 8 3130 1590 3730J 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 7470
+preplace netloc EX_BC_0_EX_BC_alur2 1 5 8 3090 2370 NJ 2370 NJ 2370 NJ 2370 NJ 2370 NJ 2370 NJ 2370 7420
+preplace netloc EX_BC_0_EX_BC_ls1 1 5 8 3100 1620 3710J 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 NJ 1470 7460
+preplace netloc EX_BC_0_EX_BC_ls2 1 5 8 3140 1580 3650J 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 7450
+preplace netloc EX_BC_0_EX_BC_lsq1 1 5 8 3120 1600 3720J 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 7440
+preplace netloc EX_BC_0_EX_BC_lsq2 1 5 8 3110 1610 3690J 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 NJ 1460 7430
+preplace netloc EX_BC_0_EX_BC_rdtag1LSQ 1 5 8 3160 2290 NJ 2290 4410J 2280 NJ 2280 NJ 2280 NJ 2280 NJ 2280 7390
+preplace netloc EX_BC_0_EX_BC_rdtag1RS 1 5 8 3190 2280 3530J 2300 4470J 2290 NJ 2290 NJ 2290 NJ 2290 NJ 2290 7360
+preplace netloc EX_BC_0_EX_BC_rdtag2LSQ 1 5 8 3170 2320 NJ 2320 4540J 2300 NJ 2300 NJ 2300 NJ 2300 NJ 2300 7410
+preplace netloc EX_BC_0_EX_BC_rdtag2RS 1 5 8 3200 2310 NJ 2310 NJ 2310 NJ 2310 NJ 2310 NJ 2310 NJ 2310 7370
+preplace netloc EX_BC_0_EX_BC_seq1 1 5 8 3180 2340 NJ 2340 4570J 2320 NJ 2320 NJ 2320 NJ 2320 NJ 2320 7380
+preplace netloc EX_BC_0_EX_BC_seq2 1 5 8 3150 2350 NJ 2350 NJ 2350 NJ 2350 NJ 2350 NJ 2350 NJ 2350 7400
+preplace netloc ID_0_f3_1 1 2 3 1080 280 1510J 140 2240
+preplace netloc ID_0_f3_2 1 2 3 1110 480 1620J 630 2220
+preplace netloc ID_0_f7_1 1 2 3 1100 290 1520J 150 2230
+preplace netloc ID_0_f7_2 1 2 3 960 250 1500J 160 2220
+preplace netloc ID_0_imm1 1 4 1 N 480
+preplace netloc ID_0_imm2 1 4 1 N 500
+preplace netloc ID_0_op1 1 2 3 1060 260 1540J 180 2180
+preplace netloc ID_0_op2 1 2 3 1070 270 1530J 170 2200
+preplace netloc ID_0_rd1 1 2 3 1110 340 1460 570 2200
+preplace netloc ID_0_rd2 1 2 3 1090 350 1640 590 2180
+preplace netloc ID_0_rs11 1 4 1 N 400
+preplace netloc ID_0_rs12 1 4 1 2210 420n
+preplace netloc ID_0_rs21 1 4 1 N 440
+preplace netloc ID_0_rs22 1 4 1 2190 420n
+preplace netloc ID_RN_0_ID_RN_MemRead_1 1 5 4 2810 300 NJ 300 NJ 300 NJ
+preplace netloc ID_RN_0_ID_RN_MemRead_2 1 5 4 2920 320 NJ 320 NJ 320 NJ
+preplace netloc ID_RN_0_ID_RN_MemWrite_1 1 5 4 2890 340 NJ 340 NJ 340 NJ
+preplace netloc ID_RN_0_ID_RN_MemWrite_2 1 5 4 3120J 370 NJ 370 NJ 370 4880
+preplace netloc ID_RN_0_ID_RN_RegWrite_1 1 5 4 2800 260 NJ 260 NJ 260 NJ
+preplace netloc ID_RN_0_ID_RN_RegWrite_2 1 5 4 2900 280 NJ 280 NJ 280 NJ
+preplace netloc ID_RN_0_ID_RN_aluop_1 1 5 4 2840J 90 NJ 90 NJ 90 4880
+preplace netloc ID_RN_0_ID_RN_aluop_2 1 5 4 2880J 100 NJ 100 NJ 100 4890
+preplace netloc ID_RN_0_ID_RN_imm_1 1 5 4 2870 1010 NJ 1010 NJ 1010 4970J
+preplace netloc ID_RN_0_ID_RN_imm_2 1 5 4 3100 500 NJ 500 NJ 500 4870J
+preplace netloc ID_RN_0_ID_RN_isBranch_1 1 5 4 2760 110 NJ 110 NJ 110 4900J
+preplace netloc ID_RN_0_ID_RN_isBranch_2 1 5 4 2790 120 NJ 120 NJ 120 NJ
+preplace netloc ID_RN_0_ID_RN_isJump_1 1 5 4 2780 140 NJ 140 NJ 140 NJ
+preplace netloc ID_RN_0_ID_RN_isJump_2 1 5 4 2860 160 NJ 160 NJ 160 NJ
+preplace netloc ID_RN_0_ID_RN_isLoad_1 1 5 4 NJ 510 3910 180 NJ 180 NJ
+preplace netloc ID_RN_0_ID_RN_isLoad_2 1 5 4 2910J 520 3920 200 NJ 200 NJ
+preplace netloc ID_RN_0_ID_RN_isStore_1 1 5 4 NJ 530 3930 220 NJ 220 NJ
+preplace netloc ID_RN_0_ID_RN_isStore_2 1 5 4 3100J 560 3940 240 NJ 240 NJ
+preplace netloc ID_RN_0_ID_RN_op_1 1 2 7 1100 210 1490 130 N 130 3140 380 NJ 380 NJ 380 NJ
+preplace netloc ID_RN_0_ID_RN_op_2 1 2 7 1080 220 1480 120 2250 140 2770 400 NJ 400 NJ 400 NJ
+preplace netloc ID_RN_0_ID_RN_pc1 1 5 4 2860J 860 NJ 860 4520J 1020 4990
+preplace netloc ID_RN_0_ID_RN_pc2 1 5 4 2840J 1000 NJ 1000 NJ 1000 4980
+preplace netloc ID_RN_0_ID_RN_rd_1 1 2 7 890 960 N 960 N 960 2850 540 NJ 540 NJ 540 NJ
+preplace netloc ID_RN_0_ID_RN_rd_2 1 5 4 3130 550 NJ 550 4540 560 N
+preplace netloc ID_RN_0_ID_RN_rs1_1 1 2 7 1040 940 N 940 N 940 2830 570 NJ 570 4570 570 5000
+preplace netloc ID_RN_0_ID_RN_rs1_2 1 5 4 3110 580 NJ 580 4550 580 4990
+preplace netloc ID_RN_0_ID_RN_rs2_1 1 2 7 970 950 N 950 N 950 2820 590 NJ 590 4560 590 4970
+preplace netloc ID_RN_0_ID_RN_rs2_2 1 5 4 3090 600 NJ 600 4530 600 4960
+preplace netloc IF_0_PC1 1 1 2 380 70 N
+preplace netloc IF_0_PC2 1 1 2 390 90 N
+preplace netloc IF_ID_0_IF_ID_i1 1 2 2 N 360 1490
+preplace netloc IF_ID_0_IF_ID_i2 1 2 2 860 370 1530
+preplace netloc IF_ID_0_IF_ID_pc1 1 2 3 860 840 1650 920 2260J
+preplace netloc IF_ID_0_IF_ID_pc2 1 2 3 720 860 1560 930 2270J
+preplace netloc IQ_0_LSQ_dstreg1 1 2 9 1010 2380 NJ 2380 NJ 2380 NJ 2380 NJ 2380 NJ 2380 NJ 2380 NJ 2380 6310
+preplace netloc IQ_0_LSQ_dstreg2 1 2 9 1020 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 NJ 2360 6190
+preplace netloc IQ_0_LSQ_imm1 1 2 9 1000 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 NJ 2390 6270
+preplace netloc IQ_0_LSQ_imm2 1 2 9 980 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 NJ 2400 6210
+preplace netloc IQ_0_LSQ_isload1 1 2 9 970 2410 NJ 2410 NJ 2410 NJ 2410 NJ 2410 NJ 2410 NJ 2410 NJ 2410 6380
+preplace netloc IQ_0_LSQ_isload2 1 2 9 910 2470 NJ 2470 NJ 2470 NJ 2470 NJ 2470 NJ 2470 NJ 2470 NJ 2470 6250
+preplace netloc IQ_0_LSQ_isstore1 1 2 9 960 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 NJ 2420 6360
+preplace netloc IQ_0_LSQ_isstore2 1 2 9 950 2430 NJ 2430 NJ 2430 NJ 2430 NJ 2430 NJ 2430 NJ 2430 NJ 2430 6340
+preplace netloc IQ_0_LSQ_offset1 1 2 9 940 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 NJ 2440 6280
+preplace netloc IQ_0_LSQ_offset2 1 2 9 930 2450 NJ 2450 NJ 2450 NJ 2450 NJ 2450 NJ 2450 NJ 2450 NJ 2450 6220
+preplace netloc IQ_0_LSQ_opcode1 1 2 9 900 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 NJ 2480 6260
+preplace netloc IQ_0_LSQ_opcode2 1 2 9 920 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 NJ 2460 6200
+preplace netloc IQ_0_LSQ_rs1status1 1 2 9 890 2490 NJ 2490 NJ 2490 NJ 2490 NJ 2490 NJ 2490 NJ 2490 NJ 2490 6390
+preplace netloc IQ_0_LSQ_rs1status2 1 2 9 1090 1280 1650J 1110 NJ 1110 NJ 1110 4060J 1170 NJ 1170 5040J 1270 NJ 1270 6290
+preplace netloc IQ_0_LSQ_rs2status1 1 2 9 1110 1290 1660J 1120 NJ 1120 NJ 1120 4050J 1180 NJ 1180 4980J 1260 5620J 1250 6240
+preplace netloc IQ_0_LSQ_rs2status2 1 2 9 1040 1240 1710J 1200 NJ 1200 NJ 1200 3690J 1250 NJ 1250 4870J 1280 NJ 1280 6230
+preplace netloc IQ_0_LSQ_srcreg11 1 2 9 880 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 NJ 2500 6370
+preplace netloc IQ_0_LSQ_srcreg12 1 2 9 870 2510 NJ 2510 NJ 2510 NJ 2510 NJ 2510 NJ 2510 NJ 2510 NJ 2510 6320
+preplace netloc IQ_0_LSQ_srcreg21 1 2 9 860 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 NJ 2520 6400
+preplace netloc IQ_0_LSQ_srcreg22 1 2 9 850 2530 NJ 2530 NJ 2530 NJ 2530 NJ 2530 NJ 2530 NJ 2530 NJ 2530 6350
+preplace netloc IQ_0_LSQ_store1 1 2 9 840 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 NJ 2540 6330
+preplace netloc IQ_0_LSQ_store2 1 2 9 830 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 6300
+preplace netloc IQ_0_URS_PRFval11 1 10 1 6560 480n
+preplace netloc IQ_0_URS_PRFval12 1 10 1 6540 520n
+preplace netloc IQ_0_URS_PRFval21 1 10 1 6550 500n
+preplace netloc IQ_0_URS_PRFval22 1 10 1 6530 540n
+preplace netloc IQ_0_URS_aluop1_in 1 10 1 6600 440n
+preplace netloc IQ_0_URS_aluop2_in 1 10 1 6580 460n
+preplace netloc IQ_0_URS_opcode1 1 10 1 6410 640n
+preplace netloc IQ_0_URS_opcode2 1 10 1 6400 660n
+preplace netloc IQ_0_URS_rd1 1 10 1 N 320
+preplace netloc IQ_0_URS_rd2 1 10 1 N 380
+preplace netloc IQ_0_URS_rs11 1 10 1 N 340
+preplace netloc IQ_0_URS_rs12 1 10 1 N 400
+preplace netloc IQ_0_URS_rs1stat1 1 10 1 6450 560n
+preplace netloc IQ_0_URS_rs1stat2 1 10 1 6430 600n
+preplace netloc IQ_0_URS_rs21 1 10 1 N 360
+preplace netloc IQ_0_URS_rs22 1 10 1 N 420
+preplace netloc IQ_0_URS_rs2stat1 1 10 1 6440 580n
+preplace netloc IQ_0_URS_rs2stat2 1 10 1 6420 620n
+preplace netloc IQ_0_rfrs11 1 8 3 5170 -20 NJ -20 6440
+preplace netloc IQ_0_rfrs12 1 8 3 5190 0 NJ 0 6240
+preplace netloc IQ_0_rfrs21 1 8 3 5160 -30 NJ -30 6450
+preplace netloc IQ_0_rfrs22 1 8 3 5180 -10 NJ -10 6430
+preplace netloc LSQ_0_FREE 1 3 7 1460J 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 5140J 900 5490
+preplace netloc LSQ_0_addressout1 1 3 1 1600 1570n
+preplace netloc LSQ_0_addressout2 1 3 1 1600 1590n
+preplace netloc LSQ_0_immval1 1 3 9 1700J 1130 NJ 1130 NJ 1130 4040J 1210 NJ 1210 4960J 1250 5490J 1230 NJ 1230 6960
+preplace netloc LSQ_0_immval2 1 3 9 1720J 1160 NJ 1160 NJ 1160 3670J 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 6920
+preplace netloc LSQ_0_loaddata1 1 3 4 1520 2210 NJ 2210 NJ 2210 NJ
+preplace netloc LSQ_0_loaddata2 1 3 4 1480J 2220 NJ 2220 NJ 2220 3540
+preplace netloc LSQ_0_ls1 1 3 9 1740J 1170 NJ 1170 NJ 1170 3980J 1220 NJ 1220 4920J 1310 NJ 1310 NJ 1310 7010
+preplace netloc LSQ_0_ls2 1 3 9 1750J 1180 NJ 1180 NJ 1180 3970J 1230 NJ 1230 4940J 1240 NJ 1240 NJ 1240 N
+preplace netloc LSQ_0_lsq1 1 3 9 1770J 1690 2380J 1150 NJ 1150 3960J 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 N
+preplace netloc LSQ_0_lsq2 1 3 9 NJ 1890 2270J 1920 NJ 1920 3600J 2330 NJ 2330 NJ 2330 NJ 2330 NJ 2330 7020
+preplace netloc LSQ_0_lup1 1 3 4 1760J 1700 NJ 1700 NJ 1700 3650
+preplace netloc LSQ_0_lup2 1 3 4 1460J 2130 NJ 2130 NJ 2130 3630
+preplace netloc LSQ_0_offsetval1 1 3 9 1730J 1190 NJ 1190 NJ 1190 3950J 1240 NJ 1240 4900J 1290 NJ 1290 NJ 1290 6930
+preplace netloc LSQ_0_offsetval2 1 3 9 1630J 1710 NJ 1710 NJ 1710 3760J 1330 NJ 1330 NJ 1330 5870J 1260 NJ 1260 N
+preplace netloc LSQ_0_rdtag1 1 3 9 1550J -40 NJ -40 NJ -40 NJ -40 NJ -40 NJ -40 NJ -40 NJ -40 6980
+preplace netloc LSQ_0_rdtag1P 1 3 4 1530J 1720 NJ 1720 NJ 1720 3820
+preplace netloc LSQ_0_rdtag2 1 3 9 1510J 1740 NJ 1740 NJ 1740 3830J 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 6950
+preplace netloc LSQ_0_rdtag2P 1 3 4 1490 1730 NJ 1730 NJ 1730 3810J
+preplace netloc LSQ_0_seq1 1 3 9 1540J 1750 NJ 1750 NJ 1750 3840J 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 6970
+preplace netloc LSQ_0_seq2 1 3 9 1500J 1760 NJ 1760 NJ 1760 3860J 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 6990
+preplace netloc LSQ_0_storeready1 1 3 4 NJ 1910 2220J 1930 NJ 1930 3640
+preplace netloc LSQ_0_storeready2 1 3 4 NJ 1930 2200J 1940 NJ 1940 3620
+preplace netloc LSQ_0_storereadydst1 1 3 4 1470 1770 NJ 1770 NJ 1770 3760J
+preplace netloc LSQ_0_storereadydst2 1 3 4 1450J 1780 NJ 1780 NJ 1780 3740
+preplace netloc RAT_0_rs1_1status 1 8 1 4920 660n
+preplace netloc RAT_0_rs1_1tag 1 8 1 4880 420n
+preplace netloc RAT_0_rs1_2status 1 8 1 4930 680n
+preplace netloc RAT_0_rs1_2tag 1 8 1 4890 440n
+preplace netloc RAT_0_rs2_1status 1 8 1 4940 700n
+preplace netloc RAT_0_rs2_1tag 1 8 1 4900 460n
+preplace netloc RAT_0_rs2_2status 1 8 1 4960 720n
+preplace netloc RAT_0_rs2_2tag 1 8 1 4910 480n
+preplace netloc RN_0_dst1 1 6 2 4070 660 N
+preplace netloc RN_0_dst2 1 6 1 3990 760n
+preplace netloc RN_0_valid1 1 6 1 3900 700n
+preplace netloc RN_0_valid2 1 6 1 3880 720n
+preplace netloc RN_IS_0_RN_IS_MemRead_1 1 9 1 5580 550n
+preplace netloc RN_IS_0_RN_IS_MemRead_2 1 9 1 5520 690n
+preplace netloc RN_IS_0_RN_IS_MemWrite_1 1 9 1 5550 570n
+preplace netloc RN_IS_0_RN_IS_MemWrite_2 1 9 1 5500 710n
+preplace netloc RN_IS_0_RN_IS_PC1 1 9 1 5720 410n
+preplace netloc RN_IS_0_RN_IS_PC2 1 9 1 5680 430n
+preplace netloc RN_IS_0_RN_IS_RegWrite_1 1 9 1 5560 530n
+preplace netloc RN_IS_0_RN_IS_RegWrite_2 1 9 1 5510 670n
+preplace netloc RN_IS_0_RN_IS_aluop_1 1 9 1 5640 240n
+preplace netloc RN_IS_0_RN_IS_aluop_2 1 9 1 5660 260n
+preplace netloc RN_IS_0_RN_IS_imm_1 1 9 1 5730 370n
+preplace netloc RN_IS_0_RN_IS_imm_2 1 9 1 5690 390n
+preplace netloc RN_IS_0_RN_IS_isBranch_1 1 9 1 5650 450n
+preplace netloc RN_IS_0_RN_IS_isBranch_2 1 9 1 5610 590n
+preplace netloc RN_IS_0_RN_IS_isJump_1 1 9 1 5600 510n
+preplace netloc RN_IS_0_RN_IS_isJump_2 1 9 1 5530 650n
+preplace netloc RN_IS_0_RN_IS_isLoad_1 1 9 1 5630 470n
+preplace netloc RN_IS_0_RN_IS_isLoad_2 1 9 1 5590 610n
+preplace netloc RN_IS_0_RN_IS_isStore_1 1 9 1 5620 490n
+preplace netloc RN_IS_0_RN_IS_isStore_2 1 9 1 5570 630n
+preplace netloc RN_IS_0_RN_IS_opcode1 1 9 1 5670 280n
+preplace netloc RN_IS_0_RN_IS_opcode2 1 9 1 5700 300n
+preplace netloc RN_IS_0_RN_IS_rd1tag 1 9 1 5850 90n
+preplace netloc RN_IS_0_RN_IS_rd2tag 1 9 1 5840 110n
+preplace netloc RN_IS_0_RN_IS_rs11 1 9 1 5810 210n
+preplace netloc RN_IS_0_RN_IS_rs11stat 1 9 1 5770 290n
+preplace netloc RN_IS_0_RN_IS_rs11tag 1 9 1 5860 130n
+preplace netloc RN_IS_0_RN_IS_rs12 1 9 1 5800 230n
+preplace netloc RN_IS_0_RN_IS_rs12stat 1 9 1 5740 350n
+preplace netloc RN_IS_0_RN_IS_rs12tag 1 9 1 5820 190n
+preplace netloc RN_IS_0_RN_IS_rs21 1 9 1 5790 250n
+preplace netloc RN_IS_0_RN_IS_rs21stat 1 9 1 5750 330n
+preplace netloc RN_IS_0_RN_IS_rs21tag 1 9 1 5530 170n
+preplace netloc RN_IS_0_RN_IS_rs22 1 9 1 5780 270n
+preplace netloc RN_IS_0_RN_IS_rs22stat 1 9 1 5760 310n
+preplace netloc RN_IS_0_RN_IS_rs22tag 1 9 1 5830 150n
+preplace netloc ROB_0_commit1 1 3 5 1820 1830 NJ 1830 NJ 1830 3670J 1570 4550
+preplace netloc ROB_0_commit2 1 3 5 1810 1840 NJ 1840 NJ 1840 3970J 1560 4560
+preplace netloc ROB_0_commitad1 1 3 5 1860 1790 NJ 1790 NJ 1790 3790J 1550 4500
+preplace netloc ROB_0_commitad2 1 3 5 1850 1800 NJ 1800 NJ 1800 3890J 1580 4510
+preplace netloc ROB_0_commiten1 1 7 1 4530 860n
+preplace netloc ROB_0_commiten2 1 7 1 4540 880n
+preplace netloc ROB_0_commitval1 1 3 5 1840 1810 NJ 1810 NJ 1810 3800J 1650 4410
+preplace netloc ROB_0_commitval2 1 3 5 1830 1820 NJ 1820 NJ 1820 4010J 1640 4420
+preplace netloc ROB_0_isls1 1 3 5 1800 1850 NJ 1850 NJ 1850 3720J 1620 4400
+preplace netloc ROB_0_isls2 1 3 5 1790 1860 NJ 1860 NJ 1860 4060J 1630 4430
+preplace netloc ROB_0_iss1 1 3 5 1780 1870 NJ 1870 NJ 1870 3730J 1610 4440
+preplace netloc ROB_0_iss2 1 3 5 1730 1880 NJ 1880 NJ 1880 4050J 1600 4450
+preplace netloc ROB_0_rd1robtag 1 7 2 4490 1030 4950
+preplace netloc ROB_0_rd2robtag 1 7 2 4480 520 N
+preplace netloc ROB_0_rw1 1 3 5 1860 1280 NJ 1280 2820J 1630 3850J 1590 4460
+preplace netloc ROB_0_rw2 1 3 5 1850 1140 NJ 1140 NJ 1140 4030J 1190 4470
+preplace netloc RegFile_0_rdata11 1 9 1 N 1040
+preplace netloc RegFile_0_rdata12 1 9 1 N 1060
+preplace netloc RegFile_0_rdata21 1 9 1 N 1080
+preplace netloc RegFile_0_rdata22 1 9 1 N 1100
+preplace netloc URS_0_FREE 1 9 3 5870 160 NJ 160 6920
+preplace netloc URS_0_aluop1 1 11 1 6930 590n
+preplace netloc URS_0_aluop2 1 11 1 6950 610n
+preplace netloc URS_0_data11 1 11 1 6990 470n
+preplace netloc URS_0_data12 1 11 1 6970 510n
+preplace netloc URS_0_data21 1 11 1 7010 490n
+preplace netloc URS_0_data22 1 11 1 6940 530n
+preplace netloc URS_0_rdtag1 1 11 1 6960 550n
+preplace netloc URS_0_rdtag2 1 11 1 7000 570n
+preplace netloc clk_1 1 0 13 -80J 700 440 490 840 1300 1680 1680 2350 1100 NJ 1100 3870 1100 NJ 1100 5110 880 5540 170 6510 860 7020 860 7480J
+preplace netloc reset_1 1 0 11 -70 710 N 710 850 1270 NJ 1270 2300 1330 2760J 1660 4020 1050 4570 1050 5150 890 5710 180 6520
+preplace netloc IF_wrapper_0_mem_addr 1 0 2 -30 680 340
+preplace netloc IF_wrapper_0_mem_read_en 1 0 2 -50 690 330
+preplace netloc InstrMem_0_line 1 0 2 -40 720 360
+preplace netloc InstrMem_0_ready 1 0 2 -60 730 350
+preplace netloc IF_wrapper_0_instr1 1 1 1 400 350n
+preplace netloc IF_wrapper_0_instr2 1 1 1 410 370n
+preplace netloc IF_wrapper_0_instr_valid 1 1 13 430J 240 NJ 240 1470J -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ -50 NJ
+preplace netloc IF_wrapper_0_fetch_flush 1 1 13 420J 230 NJ 230 1460J -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 NJ -60 7800J
+preplace netloc pc_redirect_target_0_1 1 0 1 -60 560n
+preplace netloc pc_redirect_valid_0_1 1 0 1 N 540
+levelinfo -pg 1 -110 150 580 1280 2020 2600 3360 4240 4720 5340 6030 6770 7190 7640 7820
+pagesize -pg 1 -db -bbox -sgen -340 -450 7960 2670
+"
+}
+0

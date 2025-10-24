@@ -1,0 +1,420 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Oct 24 16:04:59 2025
+# Process ID         : 129261
+# Current directory  : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IQ_0_0_synth_1
+# Command line       : vivado -log dopmidsem_IQ_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dopmidsem_IQ_0_0.tcl
+# Log file           : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IQ_0_0_synth_1/dopmidsem_IQ_0_0.vds
+# Journal file       : /home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IQ_0_0_synth_1/vivado.jou
+# Running On         : C3PO
+# Platform           : EndeavourOS
+# Operating System   : EndeavourOS Linux
+# Processor Detail   : Intel(R) Core(TM) Ultra 5 125H
+# CPU Frequency      : 1852.013 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 18
+# Host memory        : 16347 MB
+# Swap memory        : 20641 MB
+# Total Virtual      : 36988 MB
+# Available Virtual  : 23175 MB
+#-----------------------------------------------------------
+source dopmidsem_IQ_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1547.629 ; gain = 120.055 ; free physical = 195 ; free virtual = 17608
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/govind/Vivado/2025.1/Vivado/data/ip'.
+Command: synth_design -top dopmidsem_IQ_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 130131
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2169.098 ; gain = 439.797 ; free physical = 335 ; free virtual = 7320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dopmidsem_IQ_0_0' [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_IQ_0_0/synth/dopmidsem_IQ_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'IQ' [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:299]
+INFO: [Synth 8-6155] done synthesizing module 'IQ' (0#1) [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:299]
+INFO: [Synth 8-6155] done synthesizing module 'dopmidsem_IQ_0_0' (0#1) [/home/govind/RISCV_5/RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_IQ_0_0/synth/dopmidsem_IQ_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element next_head_idx_reg was removed.  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:437]
+WARNING: [Synth 8-6014] Unused sequential element IQ_isBranch_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element IQ_isJump_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element IQ_MemRead_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element IQ_MemWrite_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element IQ_RegWrite_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element IQ_pc_reg was removed. 
+WARNING: [Synth 8-7137] Register temp_head_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:408]
+WARNING: [Synth 8-7137] Register temp_tail_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:409]
+WARNING: [Synth 8-7137] Register temp_count_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:410]
+WARNING: [Synth 8-7137] Register temp_dispatch_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:411]
+WARNING: [Synth 8-7137] Register temp_nRS_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:412]
+WARNING: [Synth 8-7137] Register temp_nLSQ_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/govind/RISCV_5/RISCV_5.srcs/sources_1/new/IQ.v:413]
+WARNING: [Synth 8-7137] Register IQ_aluop_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_isLoad_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_isStore_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs1tag_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs2tag_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs1stat_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs2stat_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rdtag_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_imm_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs1_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_rs2_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register IQ_op_reg in module IQ has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs1_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs1_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs2_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs2_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rdtag_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rdtag_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_op_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_op_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs1tag_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs1tag_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs2tag_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs2tag_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_aluop_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_aluop_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs1stat_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs1stat_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_rs2stat_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_rs2stat_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_isLoad_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_isLoad_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_isStore_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_isStore_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'IQ_imm_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "IQ_imm_reg" dissolved into registers
+WARNING: [Synth 8-7129] Port pc1[31] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[30] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[29] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[28] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[27] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[26] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[25] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[24] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[23] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[22] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[21] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[20] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[19] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[18] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[17] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[16] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[15] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[14] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[13] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[12] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[11] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[10] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[9] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[8] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[7] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[6] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[5] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[4] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[3] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[2] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[1] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[0] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[31] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[30] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[29] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[28] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[27] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[26] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[25] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[24] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[23] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[22] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[21] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[20] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[19] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[18] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[17] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[16] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[15] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[14] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[13] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[12] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[11] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[10] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[9] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[8] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[7] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[6] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[5] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[4] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[3] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[2] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[1] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc2[0] in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ib1 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ib2 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ij1 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ij2 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr1 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mr2 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mw1 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mw2 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rw1 in module IQ is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rw2 in module IQ is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 2257.035 ; gain = 527.734 ; free physical = 272 ; free virtual = 6889
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 2271.879 ; gain = 542.578 ; free physical = 278 ; free virtual = 6870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 2271.879 ; gain = 542.578 ; free physical = 278 ; free virtual = 6870
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2271.879 ; gain = 0.000 ; free physical = 296 ; free virtual = 6817
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2395.617 ; gain = 0.000 ; free physical = 214 ; free virtual = 6607
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2395.652 ; gain = 0.000 ; free physical = 194 ; free virtual = 6589
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 2395.652 ; gain = 666.352 ; free physical = 193 ; free virtual = 6221
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 2403.621 ; gain = 674.320 ; free physical = 193 ; free virtual = 6221
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 2403.621 ; gain = 674.320 ; free physical = 193 ; free virtual = 6221
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2403.621 ; gain = 674.320 ; free physical = 211 ; free virtual = 6230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 20    
+	                7 Bit    Registers := 14    
+	                5 Bit    Registers := 62    
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 13    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 52    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port pc1[31] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[30] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[29] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[28] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[27] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[26] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[25] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[24] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[23] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[22] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[21] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[20] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[19] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[18] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[17] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[16] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[15] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[14] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[13] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[12] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[11] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[10] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[9] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[8] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[7] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc1[6] in module dopmidsem_IQ_0_0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 2403.621 ; gain = 674.320 ; free physical = 191 ; free virtual = 4932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 2436.621 ; gain = 707.320 ; free physical = 865 ; free virtual = 5854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:03 . Memory (MB): peak = 2437.621 ; gain = 708.320 ; free physical = 1069 ; free virtual = 6259
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:04 . Memory (MB): peak = 2465.668 ; gain = 736.367 ; free physical = 748 ; free virtual = 6175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1892 ; free virtual = 10241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1889 ; free virtual = 10241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1884 ; free virtual = 10242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1882 ; free virtual = 10241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1872 ; free virtual = 10239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1871 ; free virtual = 10239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     4|
+|3     |LUT3 |    85|
+|4     |LUT4 |    14|
+|5     |LUT5 |    10|
+|6     |LUT6 |   454|
+|7     |FDCE |   439|
+|8     |FDRE |   729|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:10 . Memory (MB): peak = 2621.480 ; gain = 892.180 ; free physical = 1869 ; free virtual = 10238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 75 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:08 . Memory (MB): peak = 2621.480 ; gain = 768.406 ; free physical = 1782 ; free virtual = 10203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:11 . Memory (MB): peak = 2621.488 ; gain = 892.180 ; free physical = 1782 ; free virtual = 10205
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2621.488 ; gain = 0.000 ; free physical = 1754 ; free virtual = 10235
+WARNING: [Netlist 29-101] Netlist 'dopmidsem_IQ_0_0' is not ideal for floorplanning, since the cellview 'IQ' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.508 ; gain = 0.000 ; free physical = 2931 ; free virtual = 13005
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 20c5a190
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:26 . Memory (MB): peak = 2677.543 ; gain = 1129.914 ; free physical = 2756 ; free virtual = 12889
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1010.872; main = 1010.872; forked = 139.561
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3552.910; main = 2677.512; forked = 957.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2701.520 ; gain = 0.000 ; free physical = 2591 ; free virtual = 12732
+INFO: [Common 17-1381] The checkpoint '/home/govind/RISCV_5/RISCV_5.runs/dopmidsem_IQ_0_0_synth_1/dopmidsem_IQ_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file dopmidsem_IQ_0_0_utilization_synth.rpt -pb dopmidsem_IQ_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 24 16:06:44 2025...

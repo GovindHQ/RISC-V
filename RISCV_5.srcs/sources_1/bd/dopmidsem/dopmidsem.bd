@@ -1,0 +1,5922 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x80941F1337F4117F",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../RISCV_5.gen/sources_1/bd/dopmidsem",
+      "name": "dopmidsem",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "IF_ID_0": "",
+      "ID_0": "",
+      "ControlUnit_0": "",
+      "ControlUnit_1": "",
+      "ID_RN_0": "",
+      "ROB_0": "",
+      "RAT_0": "",
+      "RN_0": "",
+      "RN_IS_0": "",
+      "IQ_0": "",
+      "RegFile_0": "",
+      "URS_0": "",
+      "LSQ_0": "",
+      "BC_0": "",
+      "DataMem_0": "",
+      "BC_WB_0": "",
+      "CM_0": "",
+      "Exec": {
+        "EX_0": "",
+        "EX_ALU_0": "",
+        "EX_ALU_1": "",
+        "EX_BC_0": "",
+        "IS_EX_0": ""
+      },
+      "system_ila_0": "",
+      "IF_wrapper_0": "",
+      "InstrMem_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "dopmidsem_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "instr_valid_0": {
+        "direction": "O"
+      },
+      "fetch_flush_0": {
+        "direction": "O"
+      },
+      "pc_redirect_target_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "pc_redirect_valid_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "IF_ID_0": {
+        "vlnv": "xilinx.com:module_ref:IF_ID:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_IF_ID_0_0",
+        "xci_path": "ip/dopmidsem_IF_ID_0_0/dopmidsem_IF_ID_0_0.xci",
+        "inst_hier_path": "IF_ID_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IF_ID",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "in1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "in2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "IF_ID_i1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "IF_ID_i2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "IF_ID_pc1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "IF_ID_pc2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ID_0": {
+        "vlnv": "xilinx.com:module_ref:ID:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_ID_0_0",
+        "xci_path": "ip/dopmidsem_ID_0_0/dopmidsem_ID_0_0.xci",
+        "inst_hier_path": "ID_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ID",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "IF_ID_I1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "IF_ID_I2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "immtype1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "immtype2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "op1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "op2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "f7_1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "f7_2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "f3_1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "f3_2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "rd1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "imm1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "imm2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ControlUnit_0": {
+        "vlnv": "xilinx.com:module_ref:ControlUnit:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_ControlUnit_0_0",
+        "xci_path": "ip/dopmidsem_ControlUnit_0_0/dopmidsem_ControlUnit_0_0.xci",
+        "inst_hier_path": "ControlUnit_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ControlUnit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "opcode": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "funct3": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "funct7": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "is_branch": {
+            "direction": "O"
+          },
+          "is_jump": {
+            "direction": "O"
+          },
+          "is_store": {
+            "direction": "O"
+          },
+          "is_load": {
+            "direction": "O"
+          },
+          "reg_write": {
+            "direction": "O"
+          },
+          "mem_read": {
+            "direction": "O"
+          },
+          "mem_write": {
+            "direction": "O"
+          },
+          "alu_op": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "imm_type": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          }
+        }
+      },
+      "ControlUnit_1": {
+        "vlnv": "xilinx.com:module_ref:ControlUnit:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_ControlUnit_1_0",
+        "xci_path": "ip/dopmidsem_ControlUnit_1_0/dopmidsem_ControlUnit_1_0.xci",
+        "inst_hier_path": "ControlUnit_1",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ControlUnit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "opcode": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "funct3": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "funct7": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "is_branch": {
+            "direction": "O"
+          },
+          "is_jump": {
+            "direction": "O"
+          },
+          "is_store": {
+            "direction": "O"
+          },
+          "is_load": {
+            "direction": "O"
+          },
+          "reg_write": {
+            "direction": "O"
+          },
+          "mem_read": {
+            "direction": "O"
+          },
+          "mem_write": {
+            "direction": "O"
+          },
+          "alu_op": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "imm_type": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          }
+        }
+      },
+      "ID_RN_0": {
+        "vlnv": "xilinx.com:module_ref:ID_RN:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_ID_RN_0_0",
+        "xci_path": "ip/dopmidsem_ID_RN_0_0/dopmidsem_ID_RN_0_0.xci",
+        "inst_hier_path": "ID_RN_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ID_RN",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "op1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "op2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "f7_1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "f7_2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "f3_1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "f3_2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "imm1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "imm2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "isbranch1": {
+            "direction": "I"
+          },
+          "isload1": {
+            "direction": "I"
+          },
+          "isstore1": {
+            "direction": "I"
+          },
+          "isjump1": {
+            "direction": "I"
+          },
+          "regwrite1": {
+            "direction": "I"
+          },
+          "memread1": {
+            "direction": "I"
+          },
+          "memwrite1": {
+            "direction": "I"
+          },
+          "isbranch2": {
+            "direction": "I"
+          },
+          "isload2": {
+            "direction": "I"
+          },
+          "isstore2": {
+            "direction": "I"
+          },
+          "isjump2": {
+            "direction": "I"
+          },
+          "regwrite2": {
+            "direction": "I"
+          },
+          "memread2": {
+            "direction": "I"
+          },
+          "memwrite2": {
+            "direction": "I"
+          },
+          "aluop1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "aluop2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "pc1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ID_RN_op_1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "ID_RN_op_2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "ID_RN_rd_1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_rs1_1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_rs2_1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_rd_2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_rs1_2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_rs2_2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "ID_RN_imm_1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ID_RN_imm_2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ID_RN_isBranch_1": {
+            "direction": "O"
+          },
+          "ID_RN_isLoad_1": {
+            "direction": "O"
+          },
+          "ID_RN_isStore_1": {
+            "direction": "O"
+          },
+          "ID_RN_isJump_1": {
+            "direction": "O"
+          },
+          "ID_RN_RegWrite_1": {
+            "direction": "O"
+          },
+          "ID_RN_MemRead_1": {
+            "direction": "O"
+          },
+          "ID_RN_MemWrite_1": {
+            "direction": "O"
+          },
+          "ID_RN_isBranch_2": {
+            "direction": "O"
+          },
+          "ID_RN_isLoad_2": {
+            "direction": "O"
+          },
+          "ID_RN_isStore_2": {
+            "direction": "O"
+          },
+          "ID_RN_isJump_2": {
+            "direction": "O"
+          },
+          "ID_RN_RegWrite_2": {
+            "direction": "O"
+          },
+          "ID_RN_MemRead_2": {
+            "direction": "O"
+          },
+          "ID_RN_MemWrite_2": {
+            "direction": "O"
+          },
+          "ID_RN_aluop_1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "ID_RN_aluop_2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "ID_RN_pc1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ID_RN_pc2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ROB_0": {
+        "vlnv": "xilinx.com:module_ref:ROB:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_ROB_0_0",
+        "xci_path": "ip/dopmidsem_ROB_0_0/dopmidsem_ROB_0_0.xci",
+        "inst_hier_path": "ROB_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ROB",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcastad1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcastad2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "lstag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "lstag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "strddst1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "strddst2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "valid1": {
+            "direction": "I"
+          },
+          "valid2": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "bdcast1": {
+            "direction": "I"
+          },
+          "bdcast2": {
+            "direction": "I"
+          },
+          "commitstage": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "load1": {
+            "direction": "I"
+          },
+          "load2": {
+            "direction": "I"
+          },
+          "store1": {
+            "direction": "I"
+          },
+          "store2": {
+            "direction": "I"
+          },
+          "lup1": {
+            "direction": "I"
+          },
+          "lup2": {
+            "direction": "I"
+          },
+          "strd1": {
+            "direction": "I"
+          },
+          "strd2": {
+            "direction": "I"
+          },
+          "bdcastval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "lsdata1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "lsdata2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rd1robtag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2robtag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "commitad1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "commitad2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "commiten1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "commiten2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "commitval1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "commitval2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "commit1": {
+            "direction": "O"
+          },
+          "commit2": {
+            "direction": "O"
+          },
+          "stall": {
+            "direction": "O"
+          },
+          "isls1": {
+            "direction": "O"
+          },
+          "isls2": {
+            "direction": "O"
+          },
+          "iss1": {
+            "direction": "O"
+          },
+          "iss2": {
+            "direction": "O"
+          },
+          "rw1": {
+            "direction": "O"
+          },
+          "rw2": {
+            "direction": "O"
+          }
+        }
+      },
+      "RAT_0": {
+        "vlnv": "xilinx.com:module_ref:RAT:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_RAT_0_0",
+        "xci_path": "ip/dopmidsem_RAT_0_0/dopmidsem_RAT_0_0.xci",
+        "inst_hier_path": "RAT_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RAT",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd_1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1_1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2_1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd_2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1_2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2_2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robtag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robtag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robupad1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robupad2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robupentry1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robupentry2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "robup1": {
+            "direction": "I"
+          },
+          "robup2": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rs1_1tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2_1tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1_2tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2_2tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1_1status": {
+            "direction": "O"
+          },
+          "rs1_2status": {
+            "direction": "O"
+          },
+          "rs2_1status": {
+            "direction": "O"
+          },
+          "rs2_2status": {
+            "direction": "O"
+          }
+        }
+      },
+      "RN_0": {
+        "vlnv": "xilinx.com:module_ref:RN:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_RN_0_0",
+        "xci_path": "ip/dopmidsem_RN_0_0/dopmidsem_RN_0_0.xci",
+        "inst_hier_path": "RN_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RN",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "op1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "op2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "valid1": {
+            "direction": "O"
+          },
+          "valid2": {
+            "direction": "O"
+          },
+          "dst1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "dst2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "RN_IS_0": {
+        "vlnv": "xilinx.com:module_ref:RN_IS:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_RN_IS_0_0",
+        "xci_path": "ip/dopmidsem_RN_IS_0_0/dopmidsem_RN_IS_0_0.xci",
+        "inst_hier_path": "RN_IS_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RN_IS",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "alu1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "alu2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "b1": {
+            "direction": "I"
+          },
+          "b2": {
+            "direction": "I"
+          },
+          "j1": {
+            "direction": "I"
+          },
+          "j2": {
+            "direction": "I"
+          },
+          "l1": {
+            "direction": "I"
+          },
+          "l2": {
+            "direction": "I"
+          },
+          "s1": {
+            "direction": "I"
+          },
+          "s2": {
+            "direction": "I"
+          },
+          "rw1": {
+            "direction": "I"
+          },
+          "rw2": {
+            "direction": "I"
+          },
+          "mr1": {
+            "direction": "I"
+          },
+          "mr2": {
+            "direction": "I"
+          },
+          "mw1": {
+            "direction": "I"
+          },
+          "mw2": {
+            "direction": "I"
+          },
+          "op1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "op2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "tag11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "tag12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "tag21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "tag22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "d1tag": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "d2tag": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "s11": {
+            "direction": "I"
+          },
+          "s12": {
+            "direction": "I"
+          },
+          "s21": {
+            "direction": "I"
+          },
+          "s22": {
+            "direction": "I"
+          },
+          "imm1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "imm2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "RN_IS_rd1tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rd2tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs11tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs22tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs21tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs12tag": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs11": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs12": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs21": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs22": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RN_IS_rs11stat": {
+            "direction": "O"
+          },
+          "RN_IS_rs22stat": {
+            "direction": "O"
+          },
+          "RN_IS_rs21stat": {
+            "direction": "O"
+          },
+          "RN_IS_rs12stat": {
+            "direction": "O"
+          },
+          "RN_IS_imm_1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RN_IS_imm_2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RN_IS_PC1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RN_IS_PC2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "RN_IS_isBranch_1": {
+            "direction": "O"
+          },
+          "RN_IS_isLoad_1": {
+            "direction": "O"
+          },
+          "RN_IS_isStore_1": {
+            "direction": "O"
+          },
+          "RN_IS_isJump_1": {
+            "direction": "O"
+          },
+          "RN_IS_RegWrite_1": {
+            "direction": "O"
+          },
+          "RN_IS_MemRead_1": {
+            "direction": "O"
+          },
+          "RN_IS_MemWrite_1": {
+            "direction": "O"
+          },
+          "RN_IS_isBranch_2": {
+            "direction": "O"
+          },
+          "RN_IS_isLoad_2": {
+            "direction": "O"
+          },
+          "RN_IS_isStore_2": {
+            "direction": "O"
+          },
+          "RN_IS_isJump_2": {
+            "direction": "O"
+          },
+          "RN_IS_RegWrite_2": {
+            "direction": "O"
+          },
+          "RN_IS_MemRead_2": {
+            "direction": "O"
+          },
+          "RN_IS_MemWrite_2": {
+            "direction": "O"
+          },
+          "RN_IS_aluop_1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "RN_IS_aluop_2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "RN_IS_opcode1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "RN_IS_opcode2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "IQ_0": {
+        "vlnv": "xilinx.com:module_ref:IQ:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_IQ_0_0",
+        "xci_path": "ip/dopmidsem_IQ_0_0/dopmidsem_IQ_0_0.xci",
+        "inst_hier_path": "IQ_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IQ",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "aluop1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "aluop2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "op1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "op2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "rs1tag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1tag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2tag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs2tag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs1s1": {
+            "direction": "I"
+          },
+          "rs1s2": {
+            "direction": "I"
+          },
+          "rs2s1": {
+            "direction": "I"
+          },
+          "rs2s2": {
+            "direction": "I"
+          },
+          "pc1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "pc2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "imm1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "imm2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ib1": {
+            "direction": "I"
+          },
+          "ib2": {
+            "direction": "I"
+          },
+          "il1": {
+            "direction": "I"
+          },
+          "il2": {
+            "direction": "I"
+          },
+          "is1": {
+            "direction": "I"
+          },
+          "is2": {
+            "direction": "I"
+          },
+          "ij1": {
+            "direction": "I"
+          },
+          "ij2": {
+            "direction": "I"
+          },
+          "mr1": {
+            "direction": "I"
+          },
+          "mr2": {
+            "direction": "I"
+          },
+          "mw1": {
+            "direction": "I"
+          },
+          "mw2": {
+            "direction": "I"
+          },
+          "rw1": {
+            "direction": "I"
+          },
+          "rw2": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "UF": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "LF": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "rfrd11": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rfrd12": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rfrd21": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rfrd22": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rfrs11": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rfrs12": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rfrs21": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rfrs22": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rd1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rs11": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rs21": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rd2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rs12": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_rs22": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_aluop1_in": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "URS_aluop2_in": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "URS_PRFval11": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_PRFval21": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_PRFval12": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_PRFval22": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_rs1stat1": {
+            "direction": "O"
+          },
+          "URS_rs2stat1": {
+            "direction": "O"
+          },
+          "URS_rs1stat2": {
+            "direction": "O"
+          },
+          "URS_rs2stat2": {
+            "direction": "O"
+          },
+          "URS_opcode1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "URS_opcode2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "LSQ_isload1": {
+            "direction": "O"
+          },
+          "LSQ_isstore1": {
+            "direction": "O"
+          },
+          "LSQ_rs1status1": {
+            "direction": "O"
+          },
+          "LSQ_rs2status1": {
+            "direction": "O"
+          },
+          "LSQ_isload2": {
+            "direction": "O"
+          },
+          "LSQ_isstore2": {
+            "direction": "O"
+          },
+          "LSQ_rs1status2": {
+            "direction": "O"
+          },
+          "LSQ_rs2status2": {
+            "direction": "O"
+          },
+          "LSQ_srcreg11": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_srcreg21": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_dstreg1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_srcreg12": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_srcreg22": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_dstreg2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_imm1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_imm2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_offset1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_offset2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_store1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_store2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_opcode1": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "LSQ_opcode2": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "RegFile_0": {
+        "vlnv": "xilinx.com:module_ref:RegFile:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_RegFile_0_0",
+        "xci_path": "ip/dopmidsem_RegFile_0_0/dopmidsem_RegFile_0_0.xci",
+        "inst_hier_path": "RegFile_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RegFile",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "regwrite1": {
+            "direction": "I"
+          },
+          "regwrite2": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "wrdata1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wrdata2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata11": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata12": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata21": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rdata22": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "URS_0": {
+        "vlnv": "xilinx.com:module_ref:URS:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_URS_0_0",
+        "xci_path": "ip/dopmidsem_URS_0_0/dopmidsem_URS_0_0.xci",
+        "inst_hier_path": "URS_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "URS",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rd2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rs22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcasttag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcasttag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "aluop1_in": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "aluop2_in": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "PRFval11": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PRFval21": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PRFval12": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "PRFval22": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rs1stat1": {
+            "direction": "I"
+          },
+          "rs2stat1": {
+            "direction": "I"
+          },
+          "rs1stat2": {
+            "direction": "I"
+          },
+          "rs2stat2": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "opcode1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "opcode2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "data11": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "data21": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "data12": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "data22": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rdtag1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "aluop1": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "aluop2": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "FREE": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "LSQ_0": {
+        "vlnv": "xilinx.com:module_ref:LSQ:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_LSQ_0_0",
+        "xci_path": "ip/dopmidsem_LSQ_0_0/dopmidsem_LSQ_0_0.xci",
+        "inst_hier_path": "LSQ_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LSQ",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "isload1": {
+            "direction": "I"
+          },
+          "isstore1": {
+            "direction": "I"
+          },
+          "rs1status1": {
+            "direction": "I"
+          },
+          "rs2status1": {
+            "direction": "I"
+          },
+          "isload2": {
+            "direction": "I"
+          },
+          "isstore2": {
+            "direction": "I"
+          },
+          "rs1status2": {
+            "direction": "I"
+          },
+          "rs2status2": {
+            "direction": "I"
+          },
+          "clear1": {
+            "direction": "I"
+          },
+          "clear2": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "srcreg11": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "srcreg21": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "dstreg1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "srcreg12": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "srcreg22": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "dstreg2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcasttag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcasttag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "imm1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "imm2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "opcode1": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "opcode2": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "bdcastval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastadd1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastadd2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "offset1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "offset2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "store1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "store2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bdseq1": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "bdseq2": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "immval1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "offsetval1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "immval2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "offsetval2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "loaddata1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "loaddata2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "addressout1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "addressout2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "seq1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "seq2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "rdtag1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag1P": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2P": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "storereadydst1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "storereadydst2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "FREE": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "lup1": {
+            "direction": "O"
+          },
+          "lup2": {
+            "direction": "O"
+          },
+          "ls1": {
+            "direction": "O"
+          },
+          "ls2": {
+            "direction": "O"
+          },
+          "lsq1": {
+            "direction": "O"
+          },
+          "lsq2": {
+            "direction": "O"
+          },
+          "storeready1": {
+            "direction": "O"
+          },
+          "storeready2": {
+            "direction": "O"
+          }
+        }
+      },
+      "BC_0": {
+        "vlnv": "xilinx.com:module_ref:BC:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_BC_0_0",
+        "xci_path": "ip/dopmidsem_BC_0_0/dopmidsem_BC_0_0.xci",
+        "inst_hier_path": "BC_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "alur1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "alur2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dmrd1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dmrd2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "lsq1": {
+            "direction": "I"
+          },
+          "lsq2": {
+            "direction": "I"
+          },
+          "ls1": {
+            "direction": "I"
+          },
+          "ls2": {
+            "direction": "I"
+          },
+          "rdtag1LSQ": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2LSQ": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag1RS": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "rdtag2RS": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcastad1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcastad2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "bdcastval1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastval2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "seq1": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "seq2": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "bdseq1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "bdseq2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "bdcastadd1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcastadd2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bdcast1": {
+            "direction": "O"
+          },
+          "bdcast2": {
+            "direction": "O"
+          },
+          "DM_rad1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DM_rad2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DM_Memread1": {
+            "direction": "O"
+          },
+          "DM_Memread2": {
+            "direction": "O"
+          }
+        }
+      },
+      "DataMem_0": {
+        "vlnv": "xilinx.com:module_ref:DataMem:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_DataMem_0_0",
+        "xci_path": "ip/dopmidsem_DataMem_0_0/dopmidsem_DataMem_0_0.xci",
+        "inst_hier_path": "DataMem_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DataMem",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "wrdata1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wrdata2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wrad1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "wrad2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rdad1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rdad2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Memread1": {
+            "direction": "I"
+          },
+          "Memread2": {
+            "direction": "I"
+          },
+          "Memwrite1": {
+            "direction": "I"
+          },
+          "Memwrite2": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rddata1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rddata2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "BC_WB_0": {
+        "vlnv": "xilinx.com:module_ref:BC_WB:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_BC_WB_0_0",
+        "xci_path": "ip/dopmidsem_BC_WB_0_0/dopmidsem_BC_WB_0_0.xci",
+        "inst_hier_path": "BC_WB_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BC_WB",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ls1": {
+            "direction": "I"
+          },
+          "ls2": {
+            "direction": "I"
+          },
+          "lsq1": {
+            "direction": "I"
+          },
+          "lsq2": {
+            "direction": "I"
+          },
+          "alur1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "BC_WB_lsq1": {
+            "direction": "O"
+          },
+          "BC_WB_lsq2": {
+            "direction": "O"
+          },
+          "BC_WB_ls1": {
+            "direction": "O"
+          },
+          "BC_WB_ls2": {
+            "direction": "O"
+          },
+          "BC_WB_commitstage": {
+            "direction": "O"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "CM_0": {
+        "vlnv": "xilinx.com:module_ref:CM:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_CM_0_0",
+        "xci_path": "ip/dopmidsem_CM_0_0/dopmidsem_CM_0_0.xci",
+        "inst_hier_path": "CM_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ROBrw1": {
+            "direction": "I"
+          },
+          "ROBrw2": {
+            "direction": "I"
+          },
+          "cmt1": {
+            "direction": "I"
+          },
+          "cmt2": {
+            "direction": "I"
+          },
+          "cmtad1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "cmtad2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "cmtval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "cmtval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "isls1": {
+            "direction": "I"
+          },
+          "isls2": {
+            "direction": "I"
+          },
+          "iss1": {
+            "direction": "I"
+          },
+          "iss2": {
+            "direction": "I"
+          },
+          "addressout1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "addressout2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "rw1": {
+            "direction": "O"
+          },
+          "rw2": {
+            "direction": "O"
+          },
+          "RD1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RD2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "wdata1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "wdata2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DM_wad1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DM_wad2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "clear1": {
+            "direction": "O"
+          },
+          "clear2": {
+            "direction": "O"
+          },
+          "memw1": {
+            "direction": "O"
+          },
+          "memw2": {
+            "direction": "O"
+          },
+          "rfwd1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "rfwd2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "Exec": {
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "EX_BC_alur1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EX_BC_alur2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "EX_BC_rdtag1LSQ": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "EX_BC_rdtag2LSQ": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "EX_BC_seq1": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "EX_BC_seq2": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "EX_BC_ls1": {
+            "direction": "O"
+          },
+          "EX_BC_ls2": {
+            "direction": "O"
+          },
+          "EX_BC_rdtag1RS": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "EX_BC_rdtag2RS": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "EX_BC_lsq1": {
+            "direction": "O"
+          },
+          "EX_BC_lsq2": {
+            "direction": "O"
+          },
+          "URS_rdtag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_aluop2": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "URS_data21": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_rdtag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "URS_aluop1": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "URS_data12": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_data11": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "URS_data22": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_rdtag1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_immval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_rdtag2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "LSQ_seq1": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "LSQ_offsetval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_seq2": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "LSQ_immval1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_ls2": {
+            "direction": "I"
+          },
+          "LSQ_offsetval2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "LSQ_lsq2": {
+            "direction": "I"
+          },
+          "LSQ_ls1": {
+            "direction": "I"
+          },
+          "LSQ_lsq1": {
+            "direction": "I"
+          }
+        },
+        "components": {
+          "EX_0": {
+            "vlnv": "xilinx.com:module_ref:EX:1.0",
+            "ip_revision": "1",
+            "xci_name": "dopmidsem_EX_0_0",
+            "xci_path": "ip/dopmidsem_EX_0_0/dopmidsem_EX_0_0.xci",
+            "inst_hier_path": "Exec/EX_0",
+            "has_run_ip_tcl": "true",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "EX",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "lsq1": {
+                "direction": "I"
+              },
+              "lsq2": {
+                "direction": "I"
+              },
+              "immval1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "immval2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data11": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data21": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data12": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data22": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "offsetval1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "offsetval2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "aluop1": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "aluop2": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "alu11": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "alu12": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "alu21": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "alu22": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "aluc1": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "aluc2": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              }
+            }
+          },
+          "EX_ALU_0": {
+            "vlnv": "xilinx.com:module_ref:EX_ALU:1.0",
+            "ip_revision": "1",
+            "xci_name": "dopmidsem_EX_ALU_0_0",
+            "xci_path": "ip/dopmidsem_EX_ALU_0_0/dopmidsem_EX_ALU_0_0.xci",
+            "inst_hier_path": "Exec/EX_ALU_0",
+            "has_run_ip_tcl": "true",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "EX_ALU",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "data1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "aluop": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "result": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "zero": {
+                "direction": "O"
+              }
+            }
+          },
+          "EX_ALU_1": {
+            "vlnv": "xilinx.com:module_ref:EX_ALU:1.0",
+            "ip_revision": "1",
+            "xci_name": "dopmidsem_EX_ALU_1_0",
+            "xci_path": "ip/dopmidsem_EX_ALU_1_0/dopmidsem_EX_ALU_1_0.xci",
+            "inst_hier_path": "Exec/EX_ALU_1",
+            "has_run_ip_tcl": "true",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "EX_ALU",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "data1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "data2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "aluop": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "result": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "zero": {
+                "direction": "O"
+              }
+            }
+          },
+          "EX_BC_0": {
+            "vlnv": "xilinx.com:module_ref:EX_BC:1.0",
+            "ip_revision": "1",
+            "xci_name": "dopmidsem_EX_BC_0_0",
+            "xci_path": "ip/dopmidsem_EX_BC_0_0/dopmidsem_EX_BC_0_0.xci",
+            "inst_hier_path": "Exec/EX_BC_0",
+            "has_run_ip_tcl": "true",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "EX_BC",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "aluresult1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "aluresult2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "aluzero1": {
+                "direction": "I"
+              },
+              "aluzero2": {
+                "direction": "I"
+              },
+              "rdtag1ls": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "rdtag1rs": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "rdtag2ls": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "rdtag2rs": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "seq1": {
+                "direction": "I",
+                "left": "9",
+                "right": "0"
+              },
+              "seq2": {
+                "direction": "I",
+                "left": "9",
+                "right": "0"
+              },
+              "ls1": {
+                "direction": "I"
+              },
+              "ls2": {
+                "direction": "I"
+              },
+              "lsq1": {
+                "direction": "I"
+              },
+              "lsq2": {
+                "direction": "I"
+              },
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "dopmidsem_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "EX_BC_alur1": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "EX_BC_alur2": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "EX_BC_zero1": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "EX_BC_zero2": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "EX_BC_rdtag1LSQ": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "EX_BC_rdtag2LSQ": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "EX_BC_seq1": {
+                "direction": "O",
+                "left": "9",
+                "right": "0"
+              },
+              "EX_BC_seq2": {
+                "direction": "O",
+                "left": "9",
+                "right": "0"
+              },
+              "EX_BC_ls1": {
+                "direction": "O"
+              },
+              "EX_BC_ls2": {
+                "direction": "O"
+              },
+              "EX_BC_rdtag1RS": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "EX_BC_rdtag2RS": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "EX_BC_lsq1": {
+                "direction": "O"
+              },
+              "EX_BC_lsq2": {
+                "direction": "O"
+              }
+            }
+          },
+          "IS_EX_0": {
+            "vlnv": "xilinx.com:module_ref:IS_EX:1.0",
+            "ip_revision": "1",
+            "xci_name": "dopmidsem_IS_EX_0_0",
+            "xci_path": "ip/dopmidsem_IS_EX_0_0/dopmidsem_IS_EX_0_0.xci",
+            "inst_hier_path": "Exec/IS_EX_0",
+            "has_run_ip_tcl": "true",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "IS_EX",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "LSQ_immval1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "LSQ_offsetval1": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "LSQ_immval2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "LSQ_offsetval2": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "LSQ_lsq1": {
+                "direction": "I"
+              },
+              "LSQ_lsq2": {
+                "direction": "I"
+              },
+              "LSQ_ls1": {
+                "direction": "I"
+              },
+              "LSQ_ls2": {
+                "direction": "I"
+              },
+              "LSQ_rdtag1": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "LSQ_rdtag2": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "LSQ_seq1": {
+                "direction": "I",
+                "left": "9",
+                "right": "0"
+              },
+              "LSQ_seq2": {
+                "direction": "I",
+                "left": "9",
+                "right": "0"
+              },
+              "URS_aluop1": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "URS_aluop2": {
+                "direction": "I",
+                "left": "2",
+                "right": "0"
+              },
+              "URS_data11": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "URS_data12": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "URS_data21": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "URS_data22": {
+                "direction": "I",
+                "left": "31",
+                "right": "0"
+              },
+              "URS_rdtag1": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "URS_rdtag2": {
+                "direction": "I",
+                "left": "4",
+                "right": "0"
+              },
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "dopmidsem_clk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "IS_EX_data11": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_data21": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_data12": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_data22": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_aluop1": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "IS_EX_aluop2": {
+                "direction": "O",
+                "left": "2",
+                "right": "0"
+              },
+              "IS_EX_rdtag1RS": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "IS_EX_rdtag2RS": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "IS_EX_lsq1": {
+                "direction": "O"
+              },
+              "IS_EX_lsq2": {
+                "direction": "O"
+              },
+              "IS_EX_immval1": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_immval2": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_offsetval1": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_offsetval2": {
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "IS_EX_rdtag1LSQ": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "IS_EX_rdtag2LSQ": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              },
+              "IS_EX_seq1": {
+                "direction": "O",
+                "left": "9",
+                "right": "0"
+              },
+              "IS_EX_seq2": {
+                "direction": "O",
+                "left": "9",
+                "right": "0"
+              },
+              "IS_EX_ls1": {
+                "direction": "O"
+              },
+              "IS_EX_ls2": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "EX_0_alu11": {
+            "ports": [
+              "EX_0/alu11",
+              "EX_ALU_0/data1"
+            ]
+          },
+          "EX_0_alu12": {
+            "ports": [
+              "EX_0/alu12",
+              "EX_ALU_0/data2"
+            ]
+          },
+          "EX_0_alu21": {
+            "ports": [
+              "EX_0/alu21",
+              "EX_ALU_1/data1"
+            ]
+          },
+          "EX_0_alu22": {
+            "ports": [
+              "EX_0/alu22",
+              "EX_ALU_1/data2"
+            ]
+          },
+          "EX_0_aluc1": {
+            "ports": [
+              "EX_0/aluc1",
+              "EX_ALU_0/aluop"
+            ]
+          },
+          "EX_0_aluc2": {
+            "ports": [
+              "EX_0/aluc2",
+              "EX_ALU_1/aluop"
+            ]
+          },
+          "EX_ALU_0_result": {
+            "ports": [
+              "EX_ALU_0/result",
+              "EX_BC_0/aluresult1"
+            ]
+          },
+          "EX_ALU_0_zero": {
+            "ports": [
+              "EX_ALU_0/zero",
+              "EX_BC_0/aluzero1"
+            ]
+          },
+          "EX_ALU_1_result": {
+            "ports": [
+              "EX_ALU_1/result",
+              "EX_BC_0/aluresult2"
+            ]
+          },
+          "EX_ALU_1_zero": {
+            "ports": [
+              "EX_ALU_1/zero",
+              "EX_BC_0/aluzero2"
+            ]
+          },
+          "EX_BC_0_EX_BC_alur1": {
+            "ports": [
+              "EX_BC_0/EX_BC_alur1",
+              "EX_BC_alur1"
+            ]
+          },
+          "EX_BC_0_EX_BC_alur2": {
+            "ports": [
+              "EX_BC_0/EX_BC_alur2",
+              "EX_BC_alur2"
+            ]
+          },
+          "EX_BC_0_EX_BC_ls1": {
+            "ports": [
+              "EX_BC_0/EX_BC_ls1",
+              "EX_BC_ls1"
+            ]
+          },
+          "EX_BC_0_EX_BC_ls2": {
+            "ports": [
+              "EX_BC_0/EX_BC_ls2",
+              "EX_BC_ls2"
+            ]
+          },
+          "EX_BC_0_EX_BC_lsq1": {
+            "ports": [
+              "EX_BC_0/EX_BC_lsq1",
+              "EX_BC_lsq1"
+            ]
+          },
+          "EX_BC_0_EX_BC_lsq2": {
+            "ports": [
+              "EX_BC_0/EX_BC_lsq2",
+              "EX_BC_lsq2"
+            ]
+          },
+          "EX_BC_0_EX_BC_rdtag1LSQ": {
+            "ports": [
+              "EX_BC_0/EX_BC_rdtag1LSQ",
+              "EX_BC_rdtag1LSQ"
+            ]
+          },
+          "EX_BC_0_EX_BC_rdtag1RS": {
+            "ports": [
+              "EX_BC_0/EX_BC_rdtag1RS",
+              "EX_BC_rdtag1RS"
+            ]
+          },
+          "EX_BC_0_EX_BC_rdtag2LSQ": {
+            "ports": [
+              "EX_BC_0/EX_BC_rdtag2LSQ",
+              "EX_BC_rdtag2LSQ"
+            ]
+          },
+          "EX_BC_0_EX_BC_rdtag2RS": {
+            "ports": [
+              "EX_BC_0/EX_BC_rdtag2RS",
+              "EX_BC_rdtag2RS"
+            ]
+          },
+          "EX_BC_0_EX_BC_seq1": {
+            "ports": [
+              "EX_BC_0/EX_BC_seq1",
+              "EX_BC_seq1"
+            ]
+          },
+          "EX_BC_0_EX_BC_seq2": {
+            "ports": [
+              "EX_BC_0/EX_BC_seq2",
+              "EX_BC_seq2"
+            ]
+          },
+          "IS_EX_0_IS_EX_aluop1": {
+            "ports": [
+              "IS_EX_0/IS_EX_aluop1",
+              "EX_0/aluop1"
+            ]
+          },
+          "IS_EX_0_IS_EX_aluop2": {
+            "ports": [
+              "IS_EX_0/IS_EX_aluop2",
+              "EX_0/aluop2"
+            ]
+          },
+          "IS_EX_0_IS_EX_data11": {
+            "ports": [
+              "IS_EX_0/IS_EX_data11",
+              "EX_0/data11"
+            ]
+          },
+          "IS_EX_0_IS_EX_data12": {
+            "ports": [
+              "IS_EX_0/IS_EX_data12",
+              "EX_0/data12"
+            ]
+          },
+          "IS_EX_0_IS_EX_data21": {
+            "ports": [
+              "IS_EX_0/IS_EX_data21",
+              "EX_0/data21"
+            ]
+          },
+          "IS_EX_0_IS_EX_data22": {
+            "ports": [
+              "IS_EX_0/IS_EX_data22",
+              "EX_0/data22"
+            ]
+          },
+          "IS_EX_0_IS_EX_immval1": {
+            "ports": [
+              "IS_EX_0/IS_EX_immval1",
+              "EX_0/immval1"
+            ]
+          },
+          "IS_EX_0_IS_EX_immval2": {
+            "ports": [
+              "IS_EX_0/IS_EX_immval2",
+              "EX_0/immval2"
+            ]
+          },
+          "IS_EX_0_IS_EX_ls1": {
+            "ports": [
+              "IS_EX_0/IS_EX_ls1",
+              "EX_BC_0/ls1"
+            ]
+          },
+          "IS_EX_0_IS_EX_ls2": {
+            "ports": [
+              "IS_EX_0/IS_EX_ls2",
+              "EX_BC_0/ls2"
+            ]
+          },
+          "IS_EX_0_IS_EX_lsq1": {
+            "ports": [
+              "IS_EX_0/IS_EX_lsq1",
+              "EX_BC_0/lsq1",
+              "EX_0/lsq1"
+            ]
+          },
+          "IS_EX_0_IS_EX_lsq2": {
+            "ports": [
+              "IS_EX_0/IS_EX_lsq2",
+              "EX_BC_0/lsq2",
+              "EX_0/lsq2"
+            ]
+          },
+          "IS_EX_0_IS_EX_offsetval1": {
+            "ports": [
+              "IS_EX_0/IS_EX_offsetval1",
+              "EX_0/offsetval1"
+            ]
+          },
+          "IS_EX_0_IS_EX_offsetval2": {
+            "ports": [
+              "IS_EX_0/IS_EX_offsetval2",
+              "EX_0/offsetval2"
+            ]
+          },
+          "IS_EX_0_IS_EX_rdtag1LSQ": {
+            "ports": [
+              "IS_EX_0/IS_EX_rdtag1LSQ",
+              "EX_BC_0/rdtag1ls"
+            ]
+          },
+          "IS_EX_0_IS_EX_rdtag1RS": {
+            "ports": [
+              "IS_EX_0/IS_EX_rdtag1RS",
+              "EX_BC_0/rdtag1rs"
+            ]
+          },
+          "IS_EX_0_IS_EX_rdtag2LSQ": {
+            "ports": [
+              "IS_EX_0/IS_EX_rdtag2LSQ",
+              "EX_BC_0/rdtag2ls"
+            ]
+          },
+          "IS_EX_0_IS_EX_rdtag2RS": {
+            "ports": [
+              "IS_EX_0/IS_EX_rdtag2RS",
+              "EX_BC_0/rdtag2rs"
+            ]
+          },
+          "IS_EX_0_IS_EX_seq1": {
+            "ports": [
+              "IS_EX_0/IS_EX_seq1",
+              "EX_BC_0/seq1"
+            ]
+          },
+          "IS_EX_0_IS_EX_seq2": {
+            "ports": [
+              "IS_EX_0/IS_EX_seq2",
+              "EX_BC_0/seq2"
+            ]
+          },
+          "LSQ_immval1_1": {
+            "ports": [
+              "LSQ_immval1",
+              "IS_EX_0/LSQ_immval1"
+            ]
+          },
+          "LSQ_immval2_1": {
+            "ports": [
+              "LSQ_immval2",
+              "IS_EX_0/LSQ_immval2"
+            ]
+          },
+          "LSQ_ls1_1": {
+            "ports": [
+              "LSQ_ls1",
+              "IS_EX_0/LSQ_ls1"
+            ]
+          },
+          "LSQ_ls2_1": {
+            "ports": [
+              "LSQ_ls2",
+              "IS_EX_0/LSQ_ls2"
+            ]
+          },
+          "LSQ_lsq1_1": {
+            "ports": [
+              "LSQ_lsq1",
+              "IS_EX_0/LSQ_lsq1"
+            ]
+          },
+          "LSQ_lsq2_1": {
+            "ports": [
+              "LSQ_lsq2",
+              "IS_EX_0/LSQ_lsq2"
+            ]
+          },
+          "LSQ_offsetval1_1": {
+            "ports": [
+              "LSQ_offsetval1",
+              "IS_EX_0/LSQ_offsetval1"
+            ]
+          },
+          "LSQ_offsetval2_1": {
+            "ports": [
+              "LSQ_offsetval2",
+              "IS_EX_0/LSQ_offsetval2"
+            ]
+          },
+          "LSQ_rdtag1_1": {
+            "ports": [
+              "LSQ_rdtag1",
+              "IS_EX_0/LSQ_rdtag1"
+            ]
+          },
+          "LSQ_rdtag2_1": {
+            "ports": [
+              "LSQ_rdtag2",
+              "IS_EX_0/LSQ_rdtag2"
+            ]
+          },
+          "LSQ_seq1_1": {
+            "ports": [
+              "LSQ_seq1",
+              "IS_EX_0/LSQ_seq1"
+            ]
+          },
+          "LSQ_seq2_1": {
+            "ports": [
+              "LSQ_seq2",
+              "IS_EX_0/LSQ_seq2"
+            ]
+          },
+          "URS_aluop1_1": {
+            "ports": [
+              "URS_aluop1",
+              "IS_EX_0/URS_aluop1"
+            ]
+          },
+          "URS_aluop2_1": {
+            "ports": [
+              "URS_aluop2",
+              "IS_EX_0/URS_aluop2"
+            ]
+          },
+          "URS_data11_1": {
+            "ports": [
+              "URS_data11",
+              "IS_EX_0/URS_data11"
+            ]
+          },
+          "URS_data12_1": {
+            "ports": [
+              "URS_data12",
+              "IS_EX_0/URS_data12"
+            ]
+          },
+          "URS_data21_1": {
+            "ports": [
+              "URS_data21",
+              "IS_EX_0/URS_data21"
+            ]
+          },
+          "URS_data22_1": {
+            "ports": [
+              "URS_data22",
+              "IS_EX_0/URS_data22"
+            ]
+          },
+          "URS_rdtag1_1": {
+            "ports": [
+              "URS_rdtag1",
+              "IS_EX_0/URS_rdtag1"
+            ]
+          },
+          "URS_rdtag2_1": {
+            "ports": [
+              "URS_rdtag2",
+              "IS_EX_0/URS_rdtag2"
+            ]
+          },
+          "clk_1": {
+            "ports": [
+              "clk",
+              "IS_EX_0/clk",
+              "EX_BC_0/clk"
+            ]
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "ip_revision": "21",
+        "xci_name": "dopmidsem_system_ila_0_1",
+        "xci_path": "ip/dopmidsem_system_ila_0_1/dopmidsem_system_ila_0_1.xci",
+        "inst_hier_path": "system_ila_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "10"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE3_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE4_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE5_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE6_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "IF_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:IF_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_IF_wrapper_0_0",
+        "xci_path": "ip/dopmidsem_IF_wrapper_0_0/dopmidsem_IF_wrapper_0_0.xci",
+        "inst_hier_path": "IF_wrapper_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IF_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "pc_redirect_valid": {
+            "direction": "I"
+          },
+          "pc_redirect_target": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "mem_addr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "mem_read_en": {
+            "direction": "O"
+          },
+          "mem_ready": {
+            "direction": "I"
+          },
+          "mem_read_data": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
+          },
+          "instr1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "instr2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "PC1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "PC2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "instr_valid": {
+            "direction": "O"
+          },
+          "fetch_flush": {
+            "direction": "O"
+          }
+        }
+      },
+      "InstrMem_0": {
+        "vlnv": "xilinx.com:module_ref:InstrMem:1.0",
+        "ip_revision": "1",
+        "xci_name": "dopmidsem_InstrMem_0_3",
+        "xci_path": "ip/dopmidsem_InstrMem_0_3/dopmidsem_InstrMem_0_3.xci",
+        "inst_hier_path": "InstrMem_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "InstrMem",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "dopmidsem_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "line": {
+            "direction": "O",
+            "left": "127",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "read_en": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BC_0_DM_Memread1": {
+        "ports": [
+          "BC_0/DM_Memread1",
+          "DataMem_0/Memread1"
+        ]
+      },
+      "BC_0_DM_Memread2": {
+        "ports": [
+          "BC_0/DM_Memread2",
+          "DataMem_0/Memread2"
+        ]
+      },
+      "BC_0_DM_rad1": {
+        "ports": [
+          "BC_0/DM_rad1",
+          "DataMem_0/rdad1"
+        ]
+      },
+      "BC_0_DM_rad2": {
+        "ports": [
+          "BC_0/DM_rad2",
+          "DataMem_0/rdad2"
+        ]
+      },
+      "BC_0_bdcast1": {
+        "ports": [
+          "BC_0/bdcast1",
+          "ROB_0/bdcast1"
+        ]
+      },
+      "BC_0_bdcast2": {
+        "ports": [
+          "BC_0/bdcast2",
+          "ROB_0/bdcast2"
+        ]
+      },
+      "BC_0_bdcastad1": {
+        "ports": [
+          "BC_0/bdcastad1",
+          "URS_0/bdcasttag1",
+          "LSQ_0/bdcasttag1",
+          "ROB_0/bdcastad1"
+        ]
+      },
+      "BC_0_bdcastad2": {
+        "ports": [
+          "BC_0/bdcastad2",
+          "URS_0/bdcasttag2",
+          "LSQ_0/bdcasttag2",
+          "ROB_0/bdcastad2"
+        ]
+      },
+      "BC_0_bdcastadd1": {
+        "ports": [
+          "BC_0/bdcastadd1",
+          "LSQ_0/bdcastadd1"
+        ]
+      },
+      "BC_0_bdcastadd2": {
+        "ports": [
+          "BC_0/bdcastadd2",
+          "LSQ_0/bdcastadd2"
+        ]
+      },
+      "BC_0_bdcastval1": {
+        "ports": [
+          "BC_0/bdcastval1",
+          "URS_0/bdcastval1",
+          "LSQ_0/bdcastval1",
+          "ROB_0/bdcastval1"
+        ]
+      },
+      "BC_0_bdcastval2": {
+        "ports": [
+          "BC_0/bdcastval2",
+          "URS_0/bdcastval2",
+          "LSQ_0/bdcastval2",
+          "ROB_0/bdcastval2"
+        ]
+      },
+      "BC_0_bdseq1": {
+        "ports": [
+          "BC_0/bdseq1",
+          "LSQ_0/bdseq1"
+        ]
+      },
+      "BC_0_bdseq2": {
+        "ports": [
+          "BC_0/bdseq2",
+          "LSQ_0/bdseq2"
+        ]
+      },
+      "BC_WB_0_BC_WB_commitstage": {
+        "ports": [
+          "BC_WB_0/BC_WB_commitstage",
+          "ROB_0/commitstage"
+        ]
+      },
+      "CM_0_DM_wad1": {
+        "ports": [
+          "CM_0/DM_wad1",
+          "DataMem_0/wrad1"
+        ]
+      },
+      "CM_0_DM_wad2": {
+        "ports": [
+          "CM_0/DM_wad2",
+          "DataMem_0/wrad2"
+        ]
+      },
+      "CM_0_RD1": {
+        "ports": [
+          "CM_0/RD1",
+          "RegFile_0/rd1"
+        ]
+      },
+      "CM_0_RD2": {
+        "ports": [
+          "CM_0/RD2",
+          "RegFile_0/rd2"
+        ]
+      },
+      "CM_0_clear1": {
+        "ports": [
+          "CM_0/clear1",
+          "LSQ_0/clear1"
+        ]
+      },
+      "CM_0_clear2": {
+        "ports": [
+          "CM_0/clear2",
+          "LSQ_0/clear2"
+        ]
+      },
+      "CM_0_memw1": {
+        "ports": [
+          "CM_0/memw1",
+          "DataMem_0/Memwrite1"
+        ]
+      },
+      "CM_0_memw2": {
+        "ports": [
+          "CM_0/memw2",
+          "DataMem_0/Memwrite2"
+        ]
+      },
+      "CM_0_rfwd1": {
+        "ports": [
+          "CM_0/rfwd1",
+          "RegFile_0/wrdata1"
+        ]
+      },
+      "CM_0_rfwd2": {
+        "ports": [
+          "CM_0/rfwd2",
+          "RegFile_0/wrdata2"
+        ]
+      },
+      "CM_0_rw1": {
+        "ports": [
+          "CM_0/rw1",
+          "RegFile_0/regwrite1"
+        ]
+      },
+      "CM_0_rw2": {
+        "ports": [
+          "CM_0/rw2",
+          "RegFile_0/regwrite2"
+        ]
+      },
+      "CM_0_wdata1": {
+        "ports": [
+          "CM_0/wdata1",
+          "DataMem_0/wrdata1"
+        ]
+      },
+      "CM_0_wdata2": {
+        "ports": [
+          "CM_0/wdata2",
+          "DataMem_0/wrdata2"
+        ]
+      },
+      "ControlUnit_0_alu_op": {
+        "ports": [
+          "ControlUnit_0/alu_op",
+          "ID_RN_0/aluop1"
+        ]
+      },
+      "ControlUnit_0_imm_type": {
+        "ports": [
+          "ControlUnit_0/imm_type",
+          "ID_0/immtype1"
+        ]
+      },
+      "ControlUnit_0_is_branch": {
+        "ports": [
+          "ControlUnit_0/is_branch",
+          "ID_RN_0/isbranch1"
+        ]
+      },
+      "ControlUnit_0_is_jump": {
+        "ports": [
+          "ControlUnit_0/is_jump",
+          "ID_RN_0/isjump1"
+        ]
+      },
+      "ControlUnit_0_is_load": {
+        "ports": [
+          "ControlUnit_0/is_load",
+          "ID_RN_0/isload1"
+        ]
+      },
+      "ControlUnit_0_is_store": {
+        "ports": [
+          "ControlUnit_0/is_store",
+          "ID_RN_0/isstore1"
+        ]
+      },
+      "ControlUnit_0_mem_read": {
+        "ports": [
+          "ControlUnit_0/mem_read",
+          "ID_RN_0/memread1"
+        ]
+      },
+      "ControlUnit_0_mem_write": {
+        "ports": [
+          "ControlUnit_0/mem_write",
+          "ID_RN_0/memwrite1"
+        ]
+      },
+      "ControlUnit_0_reg_write": {
+        "ports": [
+          "ControlUnit_0/reg_write",
+          "ID_RN_0/regwrite1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ControlUnit_1_alu_op": {
+        "ports": [
+          "ControlUnit_1/alu_op",
+          "ID_RN_0/aluop2"
+        ]
+      },
+      "ControlUnit_1_imm_type": {
+        "ports": [
+          "ControlUnit_1/imm_type",
+          "ID_0/immtype2"
+        ]
+      },
+      "ControlUnit_1_is_branch": {
+        "ports": [
+          "ControlUnit_1/is_branch",
+          "ID_RN_0/isbranch2"
+        ]
+      },
+      "ControlUnit_1_is_jump": {
+        "ports": [
+          "ControlUnit_1/is_jump",
+          "ID_RN_0/isjump2"
+        ]
+      },
+      "ControlUnit_1_is_load": {
+        "ports": [
+          "ControlUnit_1/is_load",
+          "ID_RN_0/isload2"
+        ]
+      },
+      "ControlUnit_1_is_store": {
+        "ports": [
+          "ControlUnit_1/is_store",
+          "ID_RN_0/isstore2"
+        ]
+      },
+      "ControlUnit_1_mem_read": {
+        "ports": [
+          "ControlUnit_1/mem_read",
+          "ID_RN_0/memread2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ControlUnit_1_mem_write": {
+        "ports": [
+          "ControlUnit_1/mem_write",
+          "ID_RN_0/memwrite2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ControlUnit_1_reg_write": {
+        "ports": [
+          "ControlUnit_1/reg_write",
+          "ID_RN_0/regwrite2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "DataMem_0_rddata1": {
+        "ports": [
+          "DataMem_0/rddata1",
+          "BC_0/dmrd1"
+        ]
+      },
+      "DataMem_0_rddata2": {
+        "ports": [
+          "DataMem_0/rddata2",
+          "BC_0/dmrd2"
+        ]
+      },
+      "EX_BC_0_EX_BC_alur1": {
+        "ports": [
+          "Exec/EX_BC_alur1",
+          "BC_WB_0/alur1",
+          "BC_0/alur1"
+        ]
+      },
+      "EX_BC_0_EX_BC_alur2": {
+        "ports": [
+          "Exec/EX_BC_alur2",
+          "BC_0/alur2"
+        ]
+      },
+      "EX_BC_0_EX_BC_ls1": {
+        "ports": [
+          "Exec/EX_BC_ls1",
+          "BC_WB_0/ls1",
+          "BC_0/ls1"
+        ]
+      },
+      "EX_BC_0_EX_BC_ls2": {
+        "ports": [
+          "Exec/EX_BC_ls2",
+          "BC_WB_0/ls2",
+          "BC_0/ls2"
+        ]
+      },
+      "EX_BC_0_EX_BC_lsq1": {
+        "ports": [
+          "Exec/EX_BC_lsq1",
+          "BC_WB_0/lsq1",
+          "BC_0/lsq1"
+        ]
+      },
+      "EX_BC_0_EX_BC_lsq2": {
+        "ports": [
+          "Exec/EX_BC_lsq2",
+          "BC_WB_0/lsq2",
+          "BC_0/lsq2"
+        ]
+      },
+      "EX_BC_0_EX_BC_rdtag1LSQ": {
+        "ports": [
+          "Exec/EX_BC_rdtag1LSQ",
+          "BC_0/rdtag1LSQ"
+        ]
+      },
+      "EX_BC_0_EX_BC_rdtag1RS": {
+        "ports": [
+          "Exec/EX_BC_rdtag1RS",
+          "BC_0/rdtag1RS"
+        ]
+      },
+      "EX_BC_0_EX_BC_rdtag2LSQ": {
+        "ports": [
+          "Exec/EX_BC_rdtag2LSQ",
+          "BC_0/rdtag2LSQ"
+        ]
+      },
+      "EX_BC_0_EX_BC_rdtag2RS": {
+        "ports": [
+          "Exec/EX_BC_rdtag2RS",
+          "BC_0/rdtag2RS"
+        ]
+      },
+      "EX_BC_0_EX_BC_seq1": {
+        "ports": [
+          "Exec/EX_BC_seq1",
+          "BC_0/seq1"
+        ]
+      },
+      "EX_BC_0_EX_BC_seq2": {
+        "ports": [
+          "Exec/EX_BC_seq2",
+          "BC_0/seq2"
+        ]
+      },
+      "ID_0_f3_1": {
+        "ports": [
+          "ID_0/f3_1",
+          "ControlUnit_0/funct3",
+          "ID_RN_0/f3_1"
+        ]
+      },
+      "ID_0_f3_2": {
+        "ports": [
+          "ID_0/f3_2",
+          "ControlUnit_1/funct3",
+          "ID_RN_0/f3_2"
+        ]
+      },
+      "ID_0_f7_1": {
+        "ports": [
+          "ID_0/f7_1",
+          "ControlUnit_0/funct7",
+          "ID_RN_0/f7_1"
+        ]
+      },
+      "ID_0_f7_2": {
+        "ports": [
+          "ID_0/f7_2",
+          "ControlUnit_1/funct7",
+          "ID_RN_0/f7_2"
+        ]
+      },
+      "ID_0_imm1": {
+        "ports": [
+          "ID_0/imm1",
+          "ID_RN_0/imm1"
+        ]
+      },
+      "ID_0_imm2": {
+        "ports": [
+          "ID_0/imm2",
+          "ID_RN_0/imm2"
+        ]
+      },
+      "ID_0_op1": {
+        "ports": [
+          "ID_0/op1",
+          "ControlUnit_0/opcode",
+          "ID_RN_0/op1"
+        ]
+      },
+      "ID_0_op2": {
+        "ports": [
+          "ID_0/op2",
+          "ControlUnit_1/opcode",
+          "ID_RN_0/op2"
+        ]
+      },
+      "ID_0_rd1": {
+        "ports": [
+          "ID_0/rd1",
+          "system_ila_0/probe8",
+          "ID_RN_0/rd1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_0_rd2": {
+        "ports": [
+          "ID_0/rd2",
+          "system_ila_0/probe9",
+          "ID_RN_0/rd2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_0_rs11": {
+        "ports": [
+          "ID_0/rs11",
+          "ID_RN_0/rs11"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_0_rs12": {
+        "ports": [
+          "ID_0/rs12",
+          "ID_RN_0/rs12"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_0_rs21": {
+        "ports": [
+          "ID_0/rs21",
+          "ID_RN_0/rs21"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_0_rs22": {
+        "ports": [
+          "ID_0/rs22",
+          "ID_RN_0/rs22"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_MemRead_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_MemRead_1",
+          "RN_IS_0/mr1"
+        ]
+      },
+      "ID_RN_0_ID_RN_MemRead_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_MemRead_2",
+          "RN_IS_0/mr2"
+        ]
+      },
+      "ID_RN_0_ID_RN_MemWrite_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_MemWrite_1",
+          "RN_IS_0/mw1"
+        ]
+      },
+      "ID_RN_0_ID_RN_MemWrite_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_MemWrite_2",
+          "RN_IS_0/mw2"
+        ]
+      },
+      "ID_RN_0_ID_RN_RegWrite_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_RegWrite_1",
+          "RN_IS_0/rw1"
+        ]
+      },
+      "ID_RN_0_ID_RN_RegWrite_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_RegWrite_2",
+          "RN_IS_0/rw2"
+        ]
+      },
+      "ID_RN_0_ID_RN_aluop_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_aluop_1",
+          "RN_IS_0/alu1"
+        ]
+      },
+      "ID_RN_0_ID_RN_aluop_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_aluop_2",
+          "RN_IS_0/alu2"
+        ]
+      },
+      "ID_RN_0_ID_RN_imm_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_imm_1",
+          "RN_IS_0/imm1"
+        ]
+      },
+      "ID_RN_0_ID_RN_imm_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_imm_2",
+          "RN_IS_0/imm2"
+        ]
+      },
+      "ID_RN_0_ID_RN_isBranch_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_isBranch_1",
+          "RN_IS_0/b1"
+        ]
+      },
+      "ID_RN_0_ID_RN_isBranch_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_isBranch_2",
+          "RN_IS_0/b2"
+        ]
+      },
+      "ID_RN_0_ID_RN_isJump_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_isJump_1",
+          "RN_IS_0/j1"
+        ]
+      },
+      "ID_RN_0_ID_RN_isJump_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_isJump_2",
+          "RN_IS_0/j2"
+        ]
+      },
+      "ID_RN_0_ID_RN_isLoad_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_isLoad_1",
+          "RN_IS_0/l1",
+          "ROB_0/load1"
+        ]
+      },
+      "ID_RN_0_ID_RN_isLoad_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_isLoad_2",
+          "RN_IS_0/l2",
+          "ROB_0/load2"
+        ]
+      },
+      "ID_RN_0_ID_RN_isStore_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_isStore_1",
+          "RN_IS_0/s1",
+          "ROB_0/store1"
+        ]
+      },
+      "ID_RN_0_ID_RN_isStore_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_isStore_2",
+          "RN_IS_0/s2",
+          "ROB_0/store2"
+        ]
+      },
+      "ID_RN_0_ID_RN_op_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_op_1",
+          "system_ila_0/probe0",
+          "RN_0/op1",
+          "RN_IS_0/op1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_op_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_op_2",
+          "system_ila_0/probe1",
+          "RN_0/op2",
+          "RN_IS_0/op2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_pc1": {
+        "ports": [
+          "ID_RN_0/ID_RN_pc1",
+          "RN_IS_0/pc1"
+        ]
+      },
+      "ID_RN_0_ID_RN_pc2": {
+        "ports": [
+          "ID_RN_0/ID_RN_pc2",
+          "RN_IS_0/pc2"
+        ]
+      },
+      "ID_RN_0_ID_RN_rd_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_rd_1",
+          "system_ila_0/probe2",
+          "RN_0/rd1",
+          "RN_IS_0/rd1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_rd_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_rd_2",
+          "RN_0/rd2",
+          "RN_IS_0/rd2",
+          "RAT_0/rd_2"
+        ]
+      },
+      "ID_RN_0_ID_RN_rs1_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_rs1_1",
+          "system_ila_0/probe3",
+          "RN_0/rs11",
+          "RN_IS_0/rs11",
+          "RAT_0/rs1_1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_rs1_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_rs1_2",
+          "RN_0/rs12",
+          "RN_IS_0/rs12",
+          "RAT_0/rs1_2"
+        ]
+      },
+      "ID_RN_0_ID_RN_rs2_1": {
+        "ports": [
+          "ID_RN_0/ID_RN_rs2_1",
+          "system_ila_0/probe4",
+          "RN_0/rs21",
+          "RN_IS_0/rs21",
+          "RAT_0/rs2_1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "ID_RN_0_ID_RN_rs2_2": {
+        "ports": [
+          "ID_RN_0/ID_RN_rs2_2",
+          "RN_0/rs22",
+          "RN_IS_0/rs22",
+          "RAT_0/rs2_2"
+        ]
+      },
+      "IF_0_PC1": {
+        "ports": [
+          "IF_wrapper_0/PC1",
+          "system_ila_0/probe5",
+          "IF_ID_0/pc1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "IF_0_PC2": {
+        "ports": [
+          "IF_wrapper_0/PC2",
+          "system_ila_0/probe6",
+          "IF_ID_0/pc2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "IF_ID_0_IF_ID_i1": {
+        "ports": [
+          "IF_ID_0/IF_ID_i1",
+          "ID_0/IF_ID_I1"
+        ]
+      },
+      "IF_ID_0_IF_ID_i2": {
+        "ports": [
+          "IF_ID_0/IF_ID_i2",
+          "ID_0/IF_ID_I2"
+        ]
+      },
+      "IF_ID_0_IF_ID_pc1": {
+        "ports": [
+          "IF_ID_0/IF_ID_pc1",
+          "ID_RN_0/pc1"
+        ]
+      },
+      "IF_ID_0_IF_ID_pc2": {
+        "ports": [
+          "IF_ID_0/IF_ID_pc2",
+          "ID_RN_0/pc2"
+        ]
+      },
+      "IF_wrapper_0_fetch_flush": {
+        "ports": [
+          "IF_wrapper_0/fetch_flush",
+          "fetch_flush_0"
+        ]
+      },
+      "IF_wrapper_0_instr1": {
+        "ports": [
+          "IF_wrapper_0/instr1",
+          "IF_ID_0/in1"
+        ]
+      },
+      "IF_wrapper_0_instr2": {
+        "ports": [
+          "IF_wrapper_0/instr2",
+          "IF_ID_0/in2"
+        ]
+      },
+      "IF_wrapper_0_instr_valid": {
+        "ports": [
+          "IF_wrapper_0/instr_valid",
+          "instr_valid_0"
+        ]
+      },
+      "IF_wrapper_0_mem_addr": {
+        "ports": [
+          "IF_wrapper_0/mem_addr",
+          "InstrMem_0/addr"
+        ]
+      },
+      "IF_wrapper_0_mem_read_en": {
+        "ports": [
+          "IF_wrapper_0/mem_read_en",
+          "InstrMem_0/read_en"
+        ]
+      },
+      "IQ_0_LSQ_dstreg1": {
+        "ports": [
+          "IQ_0/LSQ_dstreg1",
+          "LSQ_0/dstreg1"
+        ]
+      },
+      "IQ_0_LSQ_dstreg2": {
+        "ports": [
+          "IQ_0/LSQ_dstreg2",
+          "LSQ_0/dstreg2"
+        ]
+      },
+      "IQ_0_LSQ_imm1": {
+        "ports": [
+          "IQ_0/LSQ_imm1",
+          "LSQ_0/imm1"
+        ]
+      },
+      "IQ_0_LSQ_imm2": {
+        "ports": [
+          "IQ_0/LSQ_imm2",
+          "LSQ_0/imm2"
+        ]
+      },
+      "IQ_0_LSQ_isload1": {
+        "ports": [
+          "IQ_0/LSQ_isload1",
+          "LSQ_0/isload1"
+        ]
+      },
+      "IQ_0_LSQ_isload2": {
+        "ports": [
+          "IQ_0/LSQ_isload2",
+          "LSQ_0/isload2"
+        ]
+      },
+      "IQ_0_LSQ_isstore1": {
+        "ports": [
+          "IQ_0/LSQ_isstore1",
+          "LSQ_0/isstore1"
+        ]
+      },
+      "IQ_0_LSQ_isstore2": {
+        "ports": [
+          "IQ_0/LSQ_isstore2",
+          "LSQ_0/isstore2"
+        ]
+      },
+      "IQ_0_LSQ_offset1": {
+        "ports": [
+          "IQ_0/LSQ_offset1",
+          "LSQ_0/offset1"
+        ]
+      },
+      "IQ_0_LSQ_offset2": {
+        "ports": [
+          "IQ_0/LSQ_offset2",
+          "LSQ_0/offset2"
+        ]
+      },
+      "IQ_0_LSQ_opcode1": {
+        "ports": [
+          "IQ_0/LSQ_opcode1",
+          "LSQ_0/opcode1"
+        ]
+      },
+      "IQ_0_LSQ_opcode2": {
+        "ports": [
+          "IQ_0/LSQ_opcode2",
+          "LSQ_0/opcode2"
+        ]
+      },
+      "IQ_0_LSQ_rs1status1": {
+        "ports": [
+          "IQ_0/LSQ_rs1status1",
+          "LSQ_0/rs1status1"
+        ]
+      },
+      "IQ_0_LSQ_rs1status2": {
+        "ports": [
+          "IQ_0/LSQ_rs1status2",
+          "LSQ_0/rs1status2"
+        ]
+      },
+      "IQ_0_LSQ_rs2status1": {
+        "ports": [
+          "IQ_0/LSQ_rs2status1",
+          "LSQ_0/rs2status1"
+        ]
+      },
+      "IQ_0_LSQ_rs2status2": {
+        "ports": [
+          "IQ_0/LSQ_rs2status2",
+          "LSQ_0/rs2status2"
+        ]
+      },
+      "IQ_0_LSQ_srcreg11": {
+        "ports": [
+          "IQ_0/LSQ_srcreg11",
+          "LSQ_0/srcreg11"
+        ]
+      },
+      "IQ_0_LSQ_srcreg12": {
+        "ports": [
+          "IQ_0/LSQ_srcreg12",
+          "LSQ_0/srcreg12"
+        ]
+      },
+      "IQ_0_LSQ_srcreg21": {
+        "ports": [
+          "IQ_0/LSQ_srcreg21",
+          "LSQ_0/srcreg21"
+        ]
+      },
+      "IQ_0_LSQ_srcreg22": {
+        "ports": [
+          "IQ_0/LSQ_srcreg22",
+          "LSQ_0/srcreg22"
+        ]
+      },
+      "IQ_0_LSQ_store1": {
+        "ports": [
+          "IQ_0/LSQ_store1",
+          "LSQ_0/store1"
+        ]
+      },
+      "IQ_0_LSQ_store2": {
+        "ports": [
+          "IQ_0/LSQ_store2",
+          "LSQ_0/store2"
+        ]
+      },
+      "IQ_0_URS_PRFval11": {
+        "ports": [
+          "IQ_0/URS_PRFval11",
+          "URS_0/PRFval11"
+        ]
+      },
+      "IQ_0_URS_PRFval12": {
+        "ports": [
+          "IQ_0/URS_PRFval12",
+          "URS_0/PRFval12"
+        ]
+      },
+      "IQ_0_URS_PRFval21": {
+        "ports": [
+          "IQ_0/URS_PRFval21",
+          "URS_0/PRFval21"
+        ]
+      },
+      "IQ_0_URS_PRFval22": {
+        "ports": [
+          "IQ_0/URS_PRFval22",
+          "URS_0/PRFval22"
+        ]
+      },
+      "IQ_0_URS_aluop1_in": {
+        "ports": [
+          "IQ_0/URS_aluop1_in",
+          "URS_0/aluop1_in"
+        ]
+      },
+      "IQ_0_URS_aluop2_in": {
+        "ports": [
+          "IQ_0/URS_aluop2_in",
+          "URS_0/aluop2_in"
+        ]
+      },
+      "IQ_0_URS_opcode1": {
+        "ports": [
+          "IQ_0/URS_opcode1",
+          "URS_0/opcode1"
+        ]
+      },
+      "IQ_0_URS_opcode2": {
+        "ports": [
+          "IQ_0/URS_opcode2",
+          "URS_0/opcode2"
+        ]
+      },
+      "IQ_0_URS_rd1": {
+        "ports": [
+          "IQ_0/URS_rd1",
+          "URS_0/rd1"
+        ]
+      },
+      "IQ_0_URS_rd2": {
+        "ports": [
+          "IQ_0/URS_rd2",
+          "URS_0/rd2"
+        ]
+      },
+      "IQ_0_URS_rs11": {
+        "ports": [
+          "IQ_0/URS_rs11",
+          "URS_0/rs11"
+        ]
+      },
+      "IQ_0_URS_rs12": {
+        "ports": [
+          "IQ_0/URS_rs12",
+          "URS_0/rs12"
+        ]
+      },
+      "IQ_0_URS_rs1stat1": {
+        "ports": [
+          "IQ_0/URS_rs1stat1",
+          "URS_0/rs1stat1"
+        ]
+      },
+      "IQ_0_URS_rs1stat2": {
+        "ports": [
+          "IQ_0/URS_rs1stat2",
+          "URS_0/rs1stat2"
+        ]
+      },
+      "IQ_0_URS_rs21": {
+        "ports": [
+          "IQ_0/URS_rs21",
+          "URS_0/rs21"
+        ]
+      },
+      "IQ_0_URS_rs22": {
+        "ports": [
+          "IQ_0/URS_rs22",
+          "URS_0/rs22"
+        ]
+      },
+      "IQ_0_URS_rs2stat1": {
+        "ports": [
+          "IQ_0/URS_rs2stat1",
+          "URS_0/rs2stat1"
+        ]
+      },
+      "IQ_0_URS_rs2stat2": {
+        "ports": [
+          "IQ_0/URS_rs2stat2",
+          "URS_0/rs2stat2"
+        ]
+      },
+      "IQ_0_rfrs11": {
+        "ports": [
+          "IQ_0/rfrs11",
+          "RegFile_0/rs11"
+        ]
+      },
+      "IQ_0_rfrs12": {
+        "ports": [
+          "IQ_0/rfrs12",
+          "RegFile_0/rs12"
+        ]
+      },
+      "IQ_0_rfrs21": {
+        "ports": [
+          "IQ_0/rfrs21",
+          "RegFile_0/rs21"
+        ]
+      },
+      "IQ_0_rfrs22": {
+        "ports": [
+          "IQ_0/rfrs22",
+          "RegFile_0/rs22"
+        ]
+      },
+      "InstrMem_0_line": {
+        "ports": [
+          "InstrMem_0/line",
+          "IF_wrapper_0/mem_read_data"
+        ]
+      },
+      "InstrMem_0_ready": {
+        "ports": [
+          "InstrMem_0/ready",
+          "IF_wrapper_0/mem_ready"
+        ]
+      },
+      "LSQ_0_FREE": {
+        "ports": [
+          "LSQ_0/FREE",
+          "IQ_0/LF"
+        ]
+      },
+      "LSQ_0_addressout1": {
+        "ports": [
+          "LSQ_0/addressout1",
+          "CM_0/addressout1"
+        ]
+      },
+      "LSQ_0_addressout2": {
+        "ports": [
+          "LSQ_0/addressout2",
+          "CM_0/addressout2"
+        ]
+      },
+      "LSQ_0_immval1": {
+        "ports": [
+          "LSQ_0/immval1",
+          "Exec/LSQ_immval1"
+        ]
+      },
+      "LSQ_0_immval2": {
+        "ports": [
+          "LSQ_0/immval2",
+          "Exec/LSQ_immval2"
+        ]
+      },
+      "LSQ_0_loaddata1": {
+        "ports": [
+          "LSQ_0/loaddata1",
+          "ROB_0/lsdata1"
+        ]
+      },
+      "LSQ_0_loaddata2": {
+        "ports": [
+          "LSQ_0/loaddata2",
+          "ROB_0/lsdata2"
+        ]
+      },
+      "LSQ_0_ls1": {
+        "ports": [
+          "LSQ_0/ls1",
+          "Exec/LSQ_ls1"
+        ]
+      },
+      "LSQ_0_ls2": {
+        "ports": [
+          "LSQ_0/ls2",
+          "Exec/LSQ_ls2"
+        ]
+      },
+      "LSQ_0_lsq1": {
+        "ports": [
+          "LSQ_0/lsq1",
+          "Exec/LSQ_lsq1"
+        ]
+      },
+      "LSQ_0_lsq2": {
+        "ports": [
+          "LSQ_0/lsq2",
+          "Exec/LSQ_lsq2"
+        ]
+      },
+      "LSQ_0_lup1": {
+        "ports": [
+          "LSQ_0/lup1",
+          "ROB_0/lup1"
+        ]
+      },
+      "LSQ_0_lup2": {
+        "ports": [
+          "LSQ_0/lup2",
+          "ROB_0/lup2"
+        ]
+      },
+      "LSQ_0_offsetval1": {
+        "ports": [
+          "LSQ_0/offsetval1",
+          "Exec/LSQ_offsetval1"
+        ]
+      },
+      "LSQ_0_offsetval2": {
+        "ports": [
+          "LSQ_0/offsetval2",
+          "Exec/LSQ_offsetval2"
+        ]
+      },
+      "LSQ_0_rdtag1": {
+        "ports": [
+          "LSQ_0/rdtag1",
+          "Exec/LSQ_rdtag1"
+        ]
+      },
+      "LSQ_0_rdtag1P": {
+        "ports": [
+          "LSQ_0/rdtag1P",
+          "ROB_0/lstag1"
+        ]
+      },
+      "LSQ_0_rdtag2": {
+        "ports": [
+          "LSQ_0/rdtag2",
+          "Exec/LSQ_rdtag2"
+        ]
+      },
+      "LSQ_0_rdtag2P": {
+        "ports": [
+          "LSQ_0/rdtag2P",
+          "ROB_0/lstag2"
+        ]
+      },
+      "LSQ_0_seq1": {
+        "ports": [
+          "LSQ_0/seq1",
+          "Exec/LSQ_seq1"
+        ]
+      },
+      "LSQ_0_seq2": {
+        "ports": [
+          "LSQ_0/seq2",
+          "Exec/LSQ_seq2"
+        ]
+      },
+      "LSQ_0_storeready1": {
+        "ports": [
+          "LSQ_0/storeready1",
+          "ROB_0/strd1"
+        ]
+      },
+      "LSQ_0_storeready2": {
+        "ports": [
+          "LSQ_0/storeready2",
+          "ROB_0/strd2"
+        ]
+      },
+      "LSQ_0_storereadydst1": {
+        "ports": [
+          "LSQ_0/storereadydst1",
+          "ROB_0/strddst1"
+        ]
+      },
+      "LSQ_0_storereadydst2": {
+        "ports": [
+          "LSQ_0/storereadydst2",
+          "ROB_0/strddst2"
+        ]
+      },
+      "RAT_0_rs1_1status": {
+        "ports": [
+          "RAT_0/rs1_1status",
+          "RN_IS_0/s11"
+        ]
+      },
+      "RAT_0_rs1_1tag": {
+        "ports": [
+          "RAT_0/rs1_1tag",
+          "RN_IS_0/tag11"
+        ]
+      },
+      "RAT_0_rs1_2status": {
+        "ports": [
+          "RAT_0/rs1_2status",
+          "RN_IS_0/s12"
+        ]
+      },
+      "RAT_0_rs1_2tag": {
+        "ports": [
+          "RAT_0/rs1_2tag",
+          "RN_IS_0/tag12"
+        ]
+      },
+      "RAT_0_rs2_1status": {
+        "ports": [
+          "RAT_0/rs2_1status",
+          "RN_IS_0/s21"
+        ]
+      },
+      "RAT_0_rs2_1tag": {
+        "ports": [
+          "RAT_0/rs2_1tag",
+          "RN_IS_0/tag21"
+        ]
+      },
+      "RAT_0_rs2_2status": {
+        "ports": [
+          "RAT_0/rs2_2status",
+          "RN_IS_0/s22"
+        ]
+      },
+      "RAT_0_rs2_2tag": {
+        "ports": [
+          "RAT_0/rs2_2tag",
+          "RN_IS_0/tag22"
+        ]
+      },
+      "RN_0_dst1": {
+        "ports": [
+          "RN_0/dst1",
+          "RAT_0/rd_1",
+          "ROB_0/rd1"
+        ]
+      },
+      "RN_0_dst2": {
+        "ports": [
+          "RN_0/dst2",
+          "ROB_0/rd2"
+        ]
+      },
+      "RN_0_valid1": {
+        "ports": [
+          "RN_0/valid1",
+          "ROB_0/valid1"
+        ]
+      },
+      "RN_0_valid2": {
+        "ports": [
+          "RN_0/valid2",
+          "ROB_0/valid2"
+        ]
+      },
+      "RN_IS_0_RN_IS_MemRead_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_MemRead_1",
+          "IQ_0/mr1"
+        ]
+      },
+      "RN_IS_0_RN_IS_MemRead_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_MemRead_2",
+          "IQ_0/mr2"
+        ]
+      },
+      "RN_IS_0_RN_IS_MemWrite_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_MemWrite_1",
+          "IQ_0/mw1"
+        ]
+      },
+      "RN_IS_0_RN_IS_MemWrite_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_MemWrite_2",
+          "IQ_0/mw2"
+        ]
+      },
+      "RN_IS_0_RN_IS_PC1": {
+        "ports": [
+          "RN_IS_0/RN_IS_PC1",
+          "IQ_0/pc1"
+        ]
+      },
+      "RN_IS_0_RN_IS_PC2": {
+        "ports": [
+          "RN_IS_0/RN_IS_PC2",
+          "IQ_0/pc2"
+        ]
+      },
+      "RN_IS_0_RN_IS_RegWrite_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_RegWrite_1",
+          "IQ_0/rw1"
+        ]
+      },
+      "RN_IS_0_RN_IS_RegWrite_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_RegWrite_2",
+          "IQ_0/rw2"
+        ]
+      },
+      "RN_IS_0_RN_IS_aluop_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_aluop_1",
+          "IQ_0/aluop1"
+        ]
+      },
+      "RN_IS_0_RN_IS_aluop_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_aluop_2",
+          "IQ_0/aluop2"
+        ]
+      },
+      "RN_IS_0_RN_IS_imm_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_imm_1",
+          "IQ_0/imm1"
+        ]
+      },
+      "RN_IS_0_RN_IS_imm_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_imm_2",
+          "IQ_0/imm2"
+        ]
+      },
+      "RN_IS_0_RN_IS_isBranch_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_isBranch_1",
+          "IQ_0/ib1"
+        ]
+      },
+      "RN_IS_0_RN_IS_isBranch_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_isBranch_2",
+          "IQ_0/ib2"
+        ]
+      },
+      "RN_IS_0_RN_IS_isJump_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_isJump_1",
+          "IQ_0/ij1"
+        ]
+      },
+      "RN_IS_0_RN_IS_isJump_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_isJump_2",
+          "IQ_0/ij2"
+        ]
+      },
+      "RN_IS_0_RN_IS_isLoad_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_isLoad_1",
+          "IQ_0/il1"
+        ]
+      },
+      "RN_IS_0_RN_IS_isLoad_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_isLoad_2",
+          "IQ_0/il2"
+        ]
+      },
+      "RN_IS_0_RN_IS_isStore_1": {
+        "ports": [
+          "RN_IS_0/RN_IS_isStore_1",
+          "IQ_0/is1"
+        ]
+      },
+      "RN_IS_0_RN_IS_isStore_2": {
+        "ports": [
+          "RN_IS_0/RN_IS_isStore_2",
+          "IQ_0/is2"
+        ]
+      },
+      "RN_IS_0_RN_IS_opcode1": {
+        "ports": [
+          "RN_IS_0/RN_IS_opcode1",
+          "IQ_0/op1"
+        ]
+      },
+      "RN_IS_0_RN_IS_opcode2": {
+        "ports": [
+          "RN_IS_0/RN_IS_opcode2",
+          "IQ_0/op2"
+        ]
+      },
+      "RN_IS_0_RN_IS_rd1tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rd1tag",
+          "IQ_0/rdtag1"
+        ]
+      },
+      "RN_IS_0_RN_IS_rd2tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rd2tag",
+          "IQ_0/rdtag2"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs11": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs11",
+          "IQ_0/rs11"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs11stat": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs11stat",
+          "IQ_0/rs1s1"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs11tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs11tag",
+          "IQ_0/rs1tag1"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs12": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs12",
+          "IQ_0/rs12"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs12stat": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs12stat",
+          "IQ_0/rs1s2"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs12tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs12tag",
+          "IQ_0/rs1tag2"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs21": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs21",
+          "IQ_0/rs21"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs21stat": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs21stat",
+          "IQ_0/rs2s1"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs21tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs21tag",
+          "IQ_0/rs2tag1"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs22": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs22",
+          "IQ_0/rs22"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs22stat": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs22stat",
+          "IQ_0/rs2s2"
+        ]
+      },
+      "RN_IS_0_RN_IS_rs22tag": {
+        "ports": [
+          "RN_IS_0/RN_IS_rs22tag",
+          "IQ_0/rs2tag2"
+        ]
+      },
+      "ROB_0_commit1": {
+        "ports": [
+          "ROB_0/commit1",
+          "CM_0/cmt1",
+          "RAT_0/robup1"
+        ]
+      },
+      "ROB_0_commit2": {
+        "ports": [
+          "ROB_0/commit2",
+          "CM_0/cmt2",
+          "RAT_0/robup2"
+        ]
+      },
+      "ROB_0_commitad1": {
+        "ports": [
+          "ROB_0/commitad1",
+          "CM_0/cmtad1",
+          "RAT_0/robupad1"
+        ]
+      },
+      "ROB_0_commitad2": {
+        "ports": [
+          "ROB_0/commitad2",
+          "CM_0/cmtad2",
+          "RAT_0/robupad2"
+        ]
+      },
+      "ROB_0_commiten1": {
+        "ports": [
+          "ROB_0/commiten1",
+          "RAT_0/robupentry1"
+        ]
+      },
+      "ROB_0_commiten2": {
+        "ports": [
+          "ROB_0/commiten2",
+          "RAT_0/robupentry2"
+        ]
+      },
+      "ROB_0_commitval1": {
+        "ports": [
+          "ROB_0/commitval1",
+          "CM_0/cmtval1"
+        ]
+      },
+      "ROB_0_commitval2": {
+        "ports": [
+          "ROB_0/commitval2",
+          "CM_0/cmtval2"
+        ]
+      },
+      "ROB_0_isls1": {
+        "ports": [
+          "ROB_0/isls1",
+          "CM_0/isls1"
+        ]
+      },
+      "ROB_0_isls2": {
+        "ports": [
+          "ROB_0/isls2",
+          "CM_0/isls2"
+        ]
+      },
+      "ROB_0_iss1": {
+        "ports": [
+          "ROB_0/iss1",
+          "CM_0/iss1"
+        ]
+      },
+      "ROB_0_iss2": {
+        "ports": [
+          "ROB_0/iss2",
+          "CM_0/iss2"
+        ]
+      },
+      "ROB_0_rd1robtag": {
+        "ports": [
+          "ROB_0/rd1robtag",
+          "RN_IS_0/d1tag",
+          "RAT_0/robtag1"
+        ]
+      },
+      "ROB_0_rd2robtag": {
+        "ports": [
+          "ROB_0/rd2robtag",
+          "RN_IS_0/d2tag",
+          "RAT_0/robtag2"
+        ]
+      },
+      "ROB_0_rw1": {
+        "ports": [
+          "ROB_0/rw1",
+          "CM_0/ROBrw1"
+        ]
+      },
+      "ROB_0_rw2": {
+        "ports": [
+          "ROB_0/rw2",
+          "CM_0/ROBrw2"
+        ]
+      },
+      "RegFile_0_rdata11": {
+        "ports": [
+          "RegFile_0/rdata11",
+          "IQ_0/rfrd11"
+        ]
+      },
+      "RegFile_0_rdata12": {
+        "ports": [
+          "RegFile_0/rdata12",
+          "IQ_0/rfrd12"
+        ]
+      },
+      "RegFile_0_rdata21": {
+        "ports": [
+          "RegFile_0/rdata21",
+          "IQ_0/rfrd21"
+        ]
+      },
+      "RegFile_0_rdata22": {
+        "ports": [
+          "RegFile_0/rdata22",
+          "IQ_0/rfrd22"
+        ]
+      },
+      "URS_0_FREE": {
+        "ports": [
+          "URS_0/FREE",
+          "IQ_0/UF"
+        ]
+      },
+      "URS_0_aluop1": {
+        "ports": [
+          "URS_0/aluop1",
+          "Exec/URS_aluop1"
+        ]
+      },
+      "URS_0_aluop2": {
+        "ports": [
+          "URS_0/aluop2",
+          "Exec/URS_aluop2"
+        ]
+      },
+      "URS_0_data11": {
+        "ports": [
+          "URS_0/data11",
+          "Exec/URS_data11"
+        ]
+      },
+      "URS_0_data12": {
+        "ports": [
+          "URS_0/data12",
+          "Exec/URS_data12"
+        ]
+      },
+      "URS_0_data21": {
+        "ports": [
+          "URS_0/data21",
+          "Exec/URS_data21"
+        ]
+      },
+      "URS_0_data22": {
+        "ports": [
+          "URS_0/data22",
+          "Exec/URS_data22"
+        ]
+      },
+      "URS_0_rdtag1": {
+        "ports": [
+          "URS_0/rdtag1",
+          "Exec/URS_rdtag1"
+        ]
+      },
+      "URS_0_rdtag2": {
+        "ports": [
+          "URS_0/rdtag2",
+          "Exec/URS_rdtag2"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Exec/clk",
+          "system_ila_0/clk",
+          "InstrMem_0/clk",
+          "BC_WB_0/clk",
+          "DataMem_0/clk",
+          "RegFile_0/clk",
+          "CM_0/clk",
+          "IF_ID_0/clk",
+          "RN_IS_0/clk",
+          "ID_RN_0/clk",
+          "IF_wrapper_0/clk",
+          "URS_0/clk",
+          "IQ_0/clk",
+          "LSQ_0/clk",
+          "ROB_0/clk"
+        ]
+      },
+      "pc_redirect_target_0_1": {
+        "ports": [
+          "pc_redirect_target_0",
+          "IF_wrapper_0/pc_redirect_target"
+        ]
+      },
+      "pc_redirect_valid_0_1": {
+        "ports": [
+          "pc_redirect_valid_0",
+          "IF_wrapper_0/pc_redirect_valid"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "system_ila_0/probe7",
+          "InstrMem_0/reset",
+          "DataMem_0/reset",
+          "RegFile_0/reset",
+          "IF_wrapper_0/reset",
+          "URS_0/reset",
+          "RAT_0/reset",
+          "IQ_0/reset",
+          "LSQ_0/reset",
+          "ROB_0/reset"
+        ]
+      }
+    }
+  }
+}

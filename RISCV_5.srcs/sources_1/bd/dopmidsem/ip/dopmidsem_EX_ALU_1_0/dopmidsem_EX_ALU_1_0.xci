@@ -1,0 +1,47 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "dopmidsem_EX_ALU_1_0",
+    "cell_name": "EX_ALU_1",
+    "component_reference": "xilinx.com:module_ref:EX_ALU:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_EX_ALU_1_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "dopmidsem_EX_ALU_1_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../RISCV_5.gen/sources_1/bd/dopmidsem/ip/dopmidsem_EX_ALU_1_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "data1": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "data2": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "aluop": [ { "direction": "in", "size_left": "2", "size_right": "0" } ],
+        "result": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "zero": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

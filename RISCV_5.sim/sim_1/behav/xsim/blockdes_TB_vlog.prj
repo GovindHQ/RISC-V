@@ -1,0 +1,57 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Superscalar.srcs/sources_1/new/InstrMem.v" \
+"../../../../Superscalar.srcs/sources_1/new/IF.v" \
+"../../../../Superscalar.srcs/sources_1/new/IF_ID.v" \
+"../../../../Superscalar.srcs/sources_1/new/ID.v" \
+"../../../../Superscalar.srcs/sources_1/new/Control.v" \
+"../../../../Superscalar.srcs/sources_1/new/ID_RN.v" \
+"../../../../Superscalar.srcs/sources_1/new/ROB.v" \
+"../../../../Superscalar.srcs/sources_1/new/RAT.v" \
+"../../../../Superscalar.srcs/sources_1/new/RN.v" \
+"../../../../Superscalar.srcs/sources_1/new/RN_IS.v" \
+"../../../../Superscalar.srcs/sources_1/new/IQ.v" \
+"../../../../Superscalar.srcs/sources_1/new/RegFile.v" \
+"../../../../Superscalar.srcs/sources_1/new/URS.v" \
+"../../../../Superscalar.srcs/sources_1/new/LSQ.v" \
+"../../../../Superscalar.srcs/sources_1/new/IS_EX.v" \
+"../../../../Superscalar.srcs/sources_1/new/EX.v" \
+"../../../../Superscalar.srcs/sources_1/new/EX_ALU.v" \
+"../../../../Superscalar.srcs/sources_1/new/EX_BC.v" \
+"../../../../Superscalar.srcs/sources_1/new/BC.v" \
+"../../../../Superscalar.srcs/sources_1/new/DataMem.v" \
+"../../../../Superscalar.srcs/sources_1/new/BC_WB.v" \
+"../../../../Superscalar.srcs/sources_1/new/CM.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IF_0_0/sim/dopmidsem_IF_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_InstrMem_0_0/sim/dopmidsem_InstrMem_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IF_ID_0_0/sim/dopmidsem_IF_ID_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ID_0_0/sim/dopmidsem_ID_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ControlUnit_0_0/sim/dopmidsem_ControlUnit_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ControlUnit_1_0/sim/dopmidsem_ControlUnit_1_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ID_RN_0_0/sim/dopmidsem_ID_RN_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_ROB_0_0/sim/dopmidsem_ROB_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RAT_0_0/sim/dopmidsem_RAT_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RN_0_0/sim/dopmidsem_RN_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RN_IS_0_0/sim/dopmidsem_RN_IS_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IQ_0_0/sim/dopmidsem_IQ_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_RegFile_0_0/sim/dopmidsem_RegFile_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_URS_0_0/sim/dopmidsem_URS_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_LSQ_0_0/sim/dopmidsem_LSQ_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_IS_EX_0_0/sim/dopmidsem_IS_EX_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_0_0/sim/dopmidsem_EX_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_ALU_0_0/sim/dopmidsem_EX_ALU_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_ALU_1_0/sim/dopmidsem_EX_ALU_1_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_EX_BC_0_0/sim/dopmidsem_EX_BC_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_BC_0_0/sim/dopmidsem_BC_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_DataMem_0_0/sim/dopmidsem_DataMem_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_BC_WB_0_0/sim/dopmidsem_BC_WB_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/ip/dopmidsem_CM_0_0/sim/dopmidsem_CM_0_0.v" \
+"../../../../Superscalar.ip_user_files/bd/dopmidsem/sim/dopmidsem.v" \
+"../../../../Superscalar.srcs/sources_1/imports/hdl/dopmidsem_wrapper.v" \
+"../../../../Superscalar.srcs/sim_1/new/IFwoB_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
